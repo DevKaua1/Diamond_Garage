@@ -1,0 +1,229 @@
+*{
+    padding: 0;
+    margin: 0   ;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    background: antiquewhite;
+
+}
+.cabecalho{
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 15px 40px;
+background: #020202;
+border-radius: 4px;
+box-shadow: 0px 10px;
+}
+nav a{
+    text-decoration: none;
+    margin: 27px 15px;
+    color: #fff;
+    text-align: center;
+cursor: pointer;
+  
+}
+
+.menu{
+    display: none;
+}
+
+.btn{
+    padding: 15px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+.btn img{
+    width: 100px;
+    height: 80px;
+}
+.cards{
+    display: grid;
+    justify-content: center;
+    gap: 15px;
+    grid-template-columns: repeat(3, 270px);
+    justify-items: center;
+    column-gap: 0;
+    border-radius: 15px;
+
+}
+.p1, .p2, .p3{
+    border: solid 1px black;
+text-align: center;
+padding-bottom: 20px;
+cursor: pointer;
+border-radius: 6px;
+}
+
+ .p1,.p2, .p3, img{
+    width: 95%;
+
+    }
+    
+   
+.p1, .p2, .p3, a{
+text-decoration: none;
+color: #000000;
+}
+
+.image img{
+    width: 100%;
+    height: 225px;
+
+}
+.image{
+    background-color: #c0c0c0cc;
+    padding-bottom: 5px;
+    box-shadow: 0 3px 0 0 rgba(0, 0, 0, 0.3);
+
+}
+.preco{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 22px;
+    margin-top: 8px;
+    display: block;
+}
+.title  {
+    margin: 0;
+    font-size: 15px;
+    text-align: center;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 60px;
+}
+
+
+.search-boss {
+   position: relative;
+   display: inline-block;
+}
+.search-input{
+    padding: 12px 40px 12px 15px;
+    border-radius: 10px;
+    border: none;
+    width: 900px;
+    font-size: 14px;
+}
+.icone-busca {
+    position: absolute;
+    right: 0px;     
+    top: 1%;
+    cursor: pointer;
+    background-color: #000000;
+    height: 20px;
+    border-radius: 2px;
+}
+
+.sobre{
+    padding: 35px;
+}
+.produtos{
+    padding: 45px;
+
+}
+.produtos ul{
+    list-style: none;
+}
+
+.produtos a{
+text-decoration: none;
+color: #fff;
+}
+.help{
+    padding: 35px;
+}
+.redes{
+    padding: 35px;
+}
+.redes h3{
+    padding-bottom: 15px;
+}
+
+footer{
+    background-color: #020202;
+    display: flex;
+    color: #fff;
+    height: 300px;
+    gap: 50px;
+}
+
+.instagram,.face{
+    width: 80px; 
+    height: 50px;
+}
+
+
+@media screen and (max-width: 1400px){
+.logo-mobile img{
+    display: none;
+}
+}
+    
+@media screen and (max-width: 400px){
+    html, body {
+    overflow-x: hidden;
+}
+
+.btn img{
+margin-top: 5px;
+}
+
+    .menu{
+        display: block;
+        width: 60px;
+        height: 50px;
+    }
+    .cards{
+        display: grid;
+        width: 100%;
+        grid-template-columns: repeat(2, 170px);
+        
+    }
+    .p1,.p2,.p3{
+        width: 150px;
+    }
+    .nav,.logo{
+        display: none;
+    }
+    .cabecalho{
+        width: 394px;
+        padding: 15px 13px;
+        justify-content: flex-start;
+        gap: 20px;
+        box-shadow: 0px 0px;
+        height: 82px;
+    }
+    .search-input{
+        height: 32px;
+        width: 180px;
+    }
+    .icone-busca{
+        left: 138px;
+        top: -5%;
+    }
+
+    
+    
+    
+    footer{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 109%;
+    }
+    .sobre{
+        font-size: 16px;
+        padding: 23px;
+    }
+    
+    .titulo-principal{
+        padding: 15px;
+    }
+  
+}
