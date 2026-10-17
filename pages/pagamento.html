@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/Images/simbolo_transparente.png" type="image/x-icon">
+    <link rel="stylesheet" href="/css/pages/pagamento.css">
+
+    <title>Pagamentos</title>
+</head>
+<body>
+     <header class="cabecalho">
+        <img class="logo-prin"  src="/Images/completa_transparente.png" alt="LOGO-PRINCIPAL"> 
+        <img class="menu"   src="/Images/png-transparent-logo-business-computer-software-service-bar-angle-company-trademark-removebg-preview.png" alt=""> 
+ <nav>
+     <div class="ben">
+         <i>🔒</i>
+         <div>Pagamento seguro</div>
+            </nav>
+     </header>
+<br>
+<div class="etapas">
+    <span class="ok"> <i> ✓ </i><em>Carrinho</em></span>
+    <hr>
+     <span class="ok"> <i> ✓ </i><em>Entrega</em></span>
+     <hr>
+      <span class="confirm"> <i> 3 </i><em>Pagamento</em></span>
+</div>
+<div class="global">
+
+    <div class="pagamentos">
+        <h2 class="titulo">Forma de Pagamento</h2>
+        <div class="opc">
+            <button class="tab on" data-t="pix"><span>⚡</span>Pix<small>5% de desconto</small></button>
+            <button class="tab " data-t="card"><span>💳</span>Cartão<small>até 10x</small></button>
+            <button class="tab" data-t="boleto"><span>🧾</span>Boleto<small>vence em 3 dias</small></button>
+        </div>
+        
+        <div class="qrcode">
+            <img src="/Images/qrcode-pix.png" alt="">
+        </div>
+        <div class="escan">
+            <p>Escaneie o QR Code ou copie o código Pix</p> 
+        </div>
+        
+        <div class="code">
+            <input id="pc" type="text" readonly
+         value="00020101021126580014br.gov.bcb.pix013676b9b560-9b0f-465a-9c18-497d8d2651945204000053039865802BR5921KAUA RIBEIRO CALDEIRA6009SAO PAULO62070503***6304D9A8">
+  <button class="btn2" id="cp" type="button">Copiar</button>
+</div>
+
+<p>O pedido é confirmado na hora, assim que o pagamento é identificado.</p>
+</div>
+
+<div class="resumo">
+    
+    <h3 class="res-til">Resumo do pedido</h3>
+    <div class="item">
+        <img src="/Images/produto-escapamento-sem-fundo.png" alt="">
+        <div>Escapamento Dore Esportivo Titan Fan 160<br><small>Qtd: 1</small></div>
+        <b>R$ 1.799,99</b>
+    </div>
+
+    <div class="item">
+        <img src="/Images/New_Ponteiras_HD_sem_fundo.png" alt="">
+        <div>New Ponteiras De Escapamento<br><small>Qtd: 1</small></div>
+        <b>R$ 55,79</b>
+    </div>
+
+    <div class="item">
+        <img src="/Images/produto-retrovisor-sem-fundo.png" alt="">
+        <div>Retrovisor Esportivo Kawasaki Z400 Mini Par<br><small>Qtd: 1</small></div>
+        <b>R$ 27,59</b>
+    </div>
+
+    <div class="ln"><span>Subtotal</span><span id="st"></span></div>
+    <div style="margin-right: 25px;"   class="ln"><span>Frete</span><span>Grátis</span></div>
+    <div class="ln g" id="desc"><span>Desconto Pix (5%)</span><b id="dv"></b></div>
+    <div class="tot"><span>Total</span><b id="tt"></b></div>
+    <div class="sub" id="sb"></div>
+
+    <button class="pay">Finalizar Comprar</button>
+
+
+
+
+    <p class="protegidos">🔒 Seus dados estão protegidos</p>
+</div>
+
+
+
+
+
+
+
+
+</div>
+
+</body>
+</html>
