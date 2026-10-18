@@ -22,17 +22,33 @@
             </section>
         </section>
 
+        <!-- Aqui, criando o lado direto da página home, onde tem os inputs, etc. -->
         <section class="lado_direito">
             <section class="header-direita">
                 <img src="../Images/Logo.svg" alt="Logo">
                 <h1>Entrar</h1>
                 <p>Acesse sua conta para comprar e acompanhar seus pedidos.</p>
 
+                <!-- Começando os inputs -->
                 <section class="input-direita">
                     <form>
                         Email: <input type="email" name="email" placeholder="você@exemplo.com" x-moz-errormessage="Por favor, especifique um endereço de e-mail."> <br>
-                        Senha: <input type="password" name="senha" placeholder="Sua senha" x-moz-errormessage="Senha incorreta, digite novamente.">
+                        Senha: <input type="password" name="senha" placeholder="Sua senha" x-moz-errormessage="Senha incorreta, digite novamente."> <br>
+                        <input type="checkbox" id="conectado" name="conectado"><label for="conectado">Manter conectado</label>
+                        <a href="#">Esqueci a senha</a> <br>
+                        <button class="entrar" type="button" name="formulario">Entrar</button>
                     </form>
+
+
+                    </section>
+
+                    <section class="caminhoCadastro">
+                        <p>Ainda não tem conta?</p>
+                        <a href="#">Criar conta</a>
+
+                        <img src="../Images/Cadeado.svg" alt="cadeado">
+                        <p id="segurancaText">Conexão protegida. Seus dados ficam só com a Diamong Garage</p>
+                    </section>
                 </section>
 
             </section>
