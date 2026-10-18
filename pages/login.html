@@ -1,58 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/pages/login.css">
     <title>Login Diamond Garage</title>
 </head>
+
 <body>
     <main>
         <section class="lado_esquerdo">
-            <img src="../Images/Diamante.svg" alt="Diamente">
+            <img src="../Images/Diamante.svg" alt="">
 
-            <section class="descricao_page">
-                <h1>Precisão é o novo brilho.</h1>
+            <div class="descricao_page">
+                <h2>Precisão é o novo brilho.</h2>
                 <p>Peças de reposição, desempenho e acabemento para o seu carro, com a qualidade que ele merece.</p>
 
                 <!-- Usando classe para setar onde sera os paragrafos com a borda "amarelada" -->
                 <p class="texto-borda">Peças originais e exclusivas da loja</p>
                 <p class="texto-borda">Preço de varejo, sem passar pela montadora</p>
                 <p class="texto-borda">Pagamento protegido do carrinho à entrega</p>
-            </section>
+            </div>
         </section>
 
         <!-- Aqui, criando o lado direto da página home, onde tem os inputs, etc. -->
         <section class="lado_direito">
-            <section class="header-direita">
-                <img src="../Images/Logo.svg" alt="Logo">
+            <div class="header-direita">
+                <img src="../Images/Logo.svg" alt="">
                 <h1>Entrar</h1>
                 <p>Acesse sua conta para comprar e acompanhar seus pedidos.</p>
+            </div>
 
-                <!-- Começando os inputs -->
-                <section class="input-direita">
-                    <form>
-                        Email: <input type="email" name="email" placeholder="você@exemplo.com" x-moz-errormessage="Por favor, especifique um endereço de e-mail."> <br>
-                        Senha: <input type="password" name="senha" placeholder="Sua senha" x-moz-errormessage="Senha incorreta, digite novamente."> <br>
-                        <input type="checkbox" id="conectado" name="conectado"><label for="conectado">Manter conectado</label>
+            <!-- Começando os inputs -->
+            <section class="input-direita">
+                <form>
+                    <label for="email">E-mail: </label> <input type="email" name="email" placeholder="você@exemplo.com"
+                        x-moz-errormessage="Por favor, especifique um endereço de e-mail."> <br>
+                    <label for="senha">Senha: </label><input type="password" name="senha" placeholder="Sua senha"><br>
+
+                    <div class="opcoes-login">
+                        <input type="checkbox" id="conectado" name="conectado"><label for="conectado">Manter
+                            conectado</label>
                         <a href="#">Esqueci a senha</a> <br>
-                        <button class="entrar" type="button" name="formulario">Entrar</button>
-                    </form>
+                    </div>
 
-
-                    </section>
-
-                    <section class="caminhoCadastro">
-                        <p>Ainda não tem conta?</p>
-                        <a href="#">Criar conta</a>
-
-                        <img src="../Images/Cadeado.svg" alt="cadeado">
-                        <p id="segurancaText">Conexão protegida. Seus dados ficam só com a Diamong Garage</p>
-                    </section>
-                </section>
-
+                    <button class="entrar" type="submit">Entrar</button>
+                </form>
             </section>
+
+            <div class="caminhoCadastro">
+                <p>Ainda não tem conta? <a href="#">Criar conta</a></p>
+
+                <img src="../Images/Cadeado.svg" alt="">
+                <p id="segurancaText">Conexão protegida. Seus dados ficam só com a Diamong Garage</p>
+            </div>
         </section>
     </main>
 </body>
+
 </html>
