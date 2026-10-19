@@ -5,17 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/pages/login.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Manrope:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
     <title>Login Diamond Garage</title>
 </head>
 
 <body>
     <main>
-        <section class="lado_esquerdo">
-            <img src="../Images/Diamante.svg" alt="">
+        <section class="lado-esquerdo">
+            <div class="image-logo">
+                <img src="../Images/Diamante.svg" alt="">
+            </div>
 
-            <div class="descricao_page">
+            <div class="descricao-direita">
                 <h2>Precisão é o novo brilho.</h2>
-                <p>Peças de reposição, desempenho e acabemento para o seu carro, com a qualidade que ele merece.</p>
+                <p>Peças de reposição, desempenho e acabamento para o seu carro, com a qualidade que ele merece.</p>
 
                 <!-- Usando classe para setar onde sera os paragrafos com a borda "amarelada" -->
                 <p class="texto-borda">Peças originais e exclusivas da loja</p>
@@ -24,8 +31,8 @@
             </div>
         </section>
 
-        <!-- Aqui, criando o lado direto da página home, onde tem os inputs, etc. -->
-        <section class="lado_direito">
+        <!-- criando o lado direto da página home, onde tem os inputs, etc. -->
+        <section class="lado-direito">
             <div class="header-direita">
                 <img src="../Images/Logo.svg" alt="">
                 <h1>Entrar</h1>
@@ -35,14 +42,20 @@
             <!-- Começando os inputs -->
             <section class="input-direita">
                 <form>
-                    <label for="email">E-mail: </label> <input type="email" name="email" placeholder="você@exemplo.com"
-                        x-moz-errormessage="Por favor, especifique um endereço de e-mail."> <br>
-                    <label for="senha">Senha: </label><input type="password" name="senha" placeholder="Sua senha"><br>
+                    <div class="campo">
+                        <label id="email" for="email">E-mail</label>
+                        <input type="email" name="email" placeholder="você@exemplo.com">
+                    </div>
+
+                    <div class="campo">
+                        <label id="senha" for="senha">Senha</label>
+                        <input type="password" name="senha" placeholder="Sua senha">
+                    </div>
 
                     <div class="opcoes-login">
                         <input type="checkbox" id="conectado" name="conectado"><label for="conectado">Manter
                             conectado</label>
-                        <a href="#">Esqueci a senha</a> <br>
+                        <a href="#">Esqueci a senha</a>
                     </div>
 
                     <button class="entrar" type="submit">Entrar</button>
@@ -53,7 +66,7 @@
                 <p>Ainda não tem conta? <a href="#">Criar conta</a></p>
 
                 <img src="../Images/Cadeado.svg" alt="">
-                <p id="segurancaText">Conexão protegida. Seus dados ficam só com a Diamong Garage</p>
+                <p id="segurancaText">Conexão protegida. Seus dados ficam só com a Diamond Garage</p>
             </div>
         </section>
     </main>
