@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrinho | Diamond Garage</title>
+  <link rel="stylesheet" href="../css/pages/carrinho.css">
+  <link rel="shortcut icon" href="../Images/simbolo_transparente.png">
+</head>
+<body>
+
+  <header class="cabecalho">
+    <a href="home.html"><img class="logo" src="../Images/completa_transparente.png" alt="Diamond Garage"></a>
+
+    <nav class="menu">
+      <a href="home.html">Home</a>
+      <a href="produto.html">Produtos</a>
+      <a href="sobre-nos.html">Sobre Nós</a>
+      <a href="contato.html">Contato</a>
+    </nav>
+
+    <div class="icones">
+      <a href="login.html"><img src="../Images/user-icon-hd.png" alt="Minha conta"></a>
+      <a href="carrinho.html" class="carrinho">
+        <img src="../Images/cart-icon.svg" alt="Carrinho">
+        <span id="contador-carrinho">0</span>
+      </a>
+    </div>
+  </header>
+
+  <div class="etapas">
+    <span class="atual"><i>1</i> Carrinho</span>
+    <hr>
+    <span><i>2</i> Entrega</span>
+    <hr>
+    <span><i>3</i> Pagamento</span>
+  </div>
+
+  <main class="principal">
+
+    <h1>Meu carrinho</h1>
+
+    <div id="carrinho-cheio" class="conteudo">
+
+      <section class="itens">
+        <div id="lista-itens"></div>
+        <a href="produto.html" class="continuar">&larr; Continuar comprando</a>
+      </section>
+
+      <aside class="resumo">
+        <h2>Resumo do pedido</h2>
+
+        <div class="linha">
+          <span>Produtos (<span id="qtd-itens">0</span>)</span>
+          <span id="subtotal">R$ 0,00</span>
+        </div>
+        <div class="linha">
+          <span>Frete</span>
+          <span class="verde">Grátis</span>
+        </div>
+        <div class="linha total">
+          <span>Total</span>
+          <span id="total">R$ 0,00</span>
+        </div>
+
+        <p class="parcelas" id="parcelas"></p>
+        <p class="pix" id="pix"></p>
+
+        <a href="pagamento.html" class="finalizar">Finalizar compra</a>
+
+        <p class="seguro">🔒 Compra segura</p>
+      </aside>
+
+    </div>
+
+    <div id="carrinho-vazio">
+      <p class="vazio-icone">🛒</p>
+      <h2>Seu carrinho está vazio</h2>
+      <p>Que tal dar uma olhada nos nossos produtos?</p>
+      <a href="produto.html" class="finalizar">Ver produtos</a>
+    </div>
+
+  </main>
+
+  <footer class="rodape">
+    <div class="colunas">
+      <div>
+        <h4>Diamond Garage</h4>
+        <p>Peças e acessórios esportivos para quem leva o carro a sério.</p>
+      </div>
+      <div>
+        <h4>Menu</h4>
+        <a href="home.html">Home</a>
+        <a href="produto.html">Produtos</a>
+        <a href="sobre-nos.html">Sobre Nós</a>
+        <a href="contato.html">Contato</a>
+      </div>
+      <div>
+        <h4>Contato</h4>
+        <a href="https://wa.link/8gk5db">WhatsApp</a>
+        <a href="https://www.instagram.com/diamond_garagerj">Instagram</a>
+        <a href="mailto:diamondgarage@gmail.com">diamondgarage@gmail.com</a>
+      </div>
+      <div>
+        <h4>Pagamento</h4>
+        <p>Cartão · Pix · Boleto</p>
+      </div>
+    </div>
+    <p class="copy">© 2026 Diamond Garage. Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="../js/pages/carrinho.js"></script>
+
+</body>
+</html>

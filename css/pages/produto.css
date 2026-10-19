@@ -1,0 +1,315 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #1b1712;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+}
+
+.cabecalho {
+  background-color: #020202;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3px 40px;
+}
+
+.logo {
+  height: 80px;
+  display: block;
+}
+
+.busca {
+  position: relative;
+}
+
+.busca input {
+  width: 650px;
+  padding: 12px 60px 12px 15px;
+  border: none;
+  border-radius: 18px;
+  font-size: 14px;
+}
+
+.busca button {
+  position: absolute;
+  right: 8px;
+  top: 7px;
+  width: 38px;
+  height: 26px;
+  border: none;
+  border-radius: 15px;
+  background-color: #d4af37;
+  cursor: pointer;
+}
+
+.busca button img {
+  width: 16px;
+  height: 16px;
+}
+
+.menu a {
+  color: white;
+  margin: 0 15px;
+}
+
+.menu a:hover {
+  color: #d4af37;
+}
+
+.menu .atual {
+  color: #d4af37;
+  border-bottom: 2px solid #d4af37;
+  padding-bottom: 4px;
+}
+
+.icones {
+  display: flex;
+  gap: 17px;
+}
+
+.icones img {
+  width: 42px;
+  height: 42px;
+  display: block;
+}
+
+.carrinho {
+  position: relative;
+}
+
+#contador-carrinho {
+  position: absolute;
+  top: -6px;
+  right: -8px;
+  background-color: #d4af37;
+  color: black;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 1px 6px;
+  border-radius: 10px;
+}
+
+.banner {
+  background: linear-gradient(135deg, #050505, #1a1710);
+  border-bottom: 2px solid #d4af37;
+  padding: 50px 17%;
+}
+
+.subtitulo {
+  color: #d4af37;
+  font-weight: bold;
+}
+
+.banner h1 {
+  font-size: 48px;
+  margin: 6px 0 10px;
+}
+
+.banner span {
+  color: #d4af37;
+}
+
+.texto {
+  color: #cfc8b8;
+}
+
+.principal {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 20px 0;
+}
+
+.barra {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 28px;
+}
+
+.filtro {
+  background-color: #26211a;
+  color: white;
+  border: 1px solid #3a3328;
+  border-radius: 20px;
+  padding: 9px 20px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.filtro.ativo {
+  background-color: #d4af37;
+  color: black;
+  font-weight: bold;
+}
+
+#total {
+  color: #a79d8c;
+  margin-right: 14px;
+}
+
+#ordenar {
+  background-color: #26211a;
+  color: white;
+  border: 1px solid #3a3328;
+  border-radius: 8px;
+  padding: 9px 12px;
+}
+
+.lista {
+  display: grid;
+  grid-template-columns: repeat(3, 320px);
+  justify-content: center;
+  gap: 30px;
+}
+
+.produto {
+  background-color: #26211a;
+  border: 1px solid white;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 17px;
+}
+
+.produto:hover {
+  transform: translateY(-6px);
+}
+
+.produto img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  background-color: #c9c5bf;
+}
+
+.produto h3 {
+  font-size: 18px;
+  font-weight: normal;
+  padding: 16px 16px 0;
+  min-height: 70px;
+}
+
+.preco {
+  color: #e0be4f;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 8px 16px 0;
+}
+
+.parcelas {
+  color: #a79d8c;
+  font-size: 13px;
+  padding: 0 16px 10px;
+  min-height: 28px;
+}
+
+.comprar {
+  background-color: #d4af37;
+  color: black;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  padding: 11px;
+  margin: auto 17px 0;
+  cursor: pointer;
+}
+
+.comprar:hover {
+  background-color: #e0be4f;
+}
+
+#vazio {
+  display: none;
+  text-align: center;
+  color: #a79d8c;
+  padding: 50px 0;
+}
+
+.rodape {
+  background-color: black;
+  color: #bdb5a3;
+  border-top: 2px solid #d4af37;
+  margin-top: 64px;
+  padding: 15px 0;
+}
+
+.colunas {
+  display: flex;
+  justify-content: space-around;
+}
+
+.rodape h4 {
+  color: #d4af37;
+  margin-bottom: 12px;
+}
+
+.rodape a {
+  display: block;
+  color: #bdb5a3;
+  margin-bottom: 8px;
+}
+
+.rodape a:hover {
+  color: white;
+}
+
+.copy {
+  text-align: center;
+  font-size: 12px;
+  border-top: 1px solid #222;
+  padding-top: 14px;
+  margin-top: 10px;
+}
+
+@media (max-width: 1100px) {
+  .busca input {
+    width: 400px;
+  }
+
+  .lista {
+    grid-template-columns: repeat(2, 320px);
+  }
+}
+
+@media (max-width: 700px) {
+  .cabecalho {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .busca input {
+    width: 100%;
+  }
+
+  .busca {
+    width: 100%;
+  }
+
+  .banner {
+    padding: 30px 20px;
+  }
+
+  .barra {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .lista {
+    grid-template-columns: 1fr;
+  }
+
+  .colunas {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+}
