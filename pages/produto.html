@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Produtos | Diamond Garage</title>
+  <link rel="stylesheet" href="../css/pages/produto.css">
+  <link rel="shortcut icon" href="../Images/simbolo_transparente.png">
+</head>
+<body>
+
+  <header class="cabecalho">
+    <a href="home.html"><img class="logo" src="../Images/completa_transparente.png" alt="Diamond Garage"></a>
+
+    <div class="busca">
+      <input type="text" id="campo-busca" placeholder="Busque produto...">
+      <button id="botao-busca"><img src="../Images/search.png" alt="Buscar"></button>
+    </div>
+
+    <nav class="menu">
+      <a href="home.html">Home</a>
+      <a href="produto.html" class="atual">Produtos</a>
+      <a href="sobre-nos.html">Sobre Nós</a>
+      <a href="contato.html">Contato</a>
+    </nav>
+
+    <div class="icones">
+      <a href="login.html"><img src="../Images/user-icon-hd.png" alt="Minha conta"></a>
+      <a href="carrinho.html" class="carrinho">
+        <img src="../Images/cart-icon.svg" alt="Carrinho">
+        <span id="contador-carrinho">0</span>
+      </a>
+    </div>
+  </header>
+
+  <section class="banner">
+    <p class="subtitulo">DIAMOND GARAGE</p>
+    <h1>Todos os <span>produtos</span></h1>
+    <p class="texto">Escapamentos, volantes, retrovisores e acessórios com a qualidade que o seu projeto merece.</p>
+  </section>
+
+  <main class="principal">
+
+    <div class="barra">
+      <div>
+        <button class="filtro ativo">Todos</button>
+        <button class="filtro">Escapamentos</button>
+        <button class="filtro">Exterior</button>
+        <button class="filtro">Interior</button>
+      </div>
+
+      <div>
+        <span id="total">8 produtos encontrados</span>
+        <select id="ordenar">
+          <option value="relevancia">Ordenar: relevância</option>
+          <option value="menor">Menor preço</option>
+          <option value="maior">Maior preço</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="lista" id="lista-produtos">
+
+      <div class="produto" data-categoria="Escapamentos" data-preco="567.99">
+        <img src="../Images/produto-escapamento-sem-fundo.png" alt="Escapamento Dore Esportivo Titan Fan 160">
+        <h3>Escapamento Dore Esportivo Titan Fan 160</h3>
+        <p class="preco">R$ 567,99</p>
+        <p class="parcelas">10x de R$ 56,80</p>
+        <button class="comprar">Adicionar ao carrinho</button>
+      </div>
+
+      <div class="produto" data-categoria="Exterior" data-preco="999.99">
+        <img src="../Images/produto-aerofolio-sem-fundo.png" alt="Aerofólio Traseiro Universal estilo GT">
+        <h3>Aerofólio Traseiro Universal estilo GT</h3>
+        <p class="preco">R$ 999,99</p>
+        <p class="parcelas">10x de R$ 100,00</p>
+        <button class="comprar">Adicionar ao carrinho</button>
+      </div>
+
+      <div class="produto" data-categoria="Interior" data-preco="896.43">
+        <img src="../Images/produto-volante-sem-fundo.png" alt="Volante Esportivo Gti Grafite Renault Clio">
+        <h3>Volante Esportivo Gti Grafite Renault Clio</h3>
+        <p class="preco">R$ 896,43</p>
+        <p class="parcelas">10x de R$ 89,64</p>
+        <button class="comprar">Adicionar ao carrinho</button>
+      </div>
+
+      <div class="produto" data-categoria="Exterior" data-preco="323.87">
+        <img src="../Images/produto-emblema-sem-fundo.png" alt="Estrela Emblema Do Capô Mercedes">
+        <h3>Estrela Emblema Do Capô Mercedes</h3>
+        <p class="preco">R$ 323,87</p>
+        <p class="parcelas">10x de R$ 32,39</p>
+        <button class="comprar">Adicionar ao carrinho</button>
+      </div>
+
+      <div class="produto" data-categoria="Exterior" data-preco="37.96">
+        <img src="../Images/produto-retrovisor-sem-fundo.png" alt="Retrovisor Kawasaki Z400 Rosca Honda">
+        <h3>Retrovisor Kawasaki Z400 Rosca Honda</h3>
+        <p class="preco">R$ 37,96</p>
+        <p class="parcelas">à vista</p>
+        <button class="comprar">Adicionar ao carrinho</button>
+      </div>
+
+      <div class="produto" data-categoria="Exterior" data-preco="448.91">
+        <img src="../Images/Lip%20splitter%20dianteiro.png" alt="Spoiler Dianteiro Universal Ajustável">
+        <h3>Spoiler Dianteiro Universal Ajustável</h3>
+        <p class="preco">R$ 448,91</p>
+        <p class="parcelas">10x de R$ 44,89</p>
+        <button class="comprar">Adicionar ao carrinho</button>
+      </div>
+
+      <div class="produto" data-categoria="Escapamentos" data-preco="55.79">
+        <img src="../Images/New_Ponteiras_HD_sem_fundo.png" alt="New Ponteiras De Escapamento">
+        <h3>New Ponteiras De Escapamento</h3>
+        <p class="preco">R$ 55,79</p>
+        <p class="parcelas">à vista</p>
+        <button class="comprar">Adicionar ao carrinho</button>
+      </div>
+
+      <div class="produto" data-categoria="Exterior" data-preco="949.00">
+        <img src="../Images/Civic_HD_sem_fundo%20(1).png" alt="Grade Frontal Esportiva Civic G10">
+        <h3>Grade Frontal Esportiva Civic G10</h3>
+        <p class="preco">R$ 949,00</p>
+        <p class="parcelas">10x de R$ 94,90</p>
+        <button class="comprar">Adicionar ao carrinho</button>
+      </div>
+
+    </div>
+
+    <p id="vazio">Nenhum produto encontrado.</p>
+
+  </main>
+
+  <footer class="rodape">
+    <div class="colunas">
+      <div>
+        <h4>Diamond Garage</h4>
+        <p>Peças e acessórios esportivos para quem leva o carro a sério.</p>
+      </div>
+      <div>
+        <h4>Menu</h4>
+        <a href="home.html">Home</a>
+        <a href="produto.html">Produtos</a>
+        <a href="sobre-nos.html">Sobre Nós</a>
+        <a href="contato.html">Contato</a>
+      </div>
+      <div>
+        <h4>Contato</h4>
+        <a href="https://wa.link/8gk5db">WhatsApp</a>
+        <a href="https://www.instagram.com/diamond_garagerj">Instagram</a>
+        <a href="mailto:diamondgarage@gmail.com">diamondgarage@gmail.com</a>
+      </div>
+      <div>
+        <h4>Pagamento</h4>
+        <p>Cartão · Pix · Boleto</p>
+      </div>
+    </div>
+    <p class="copy">© 2026 Diamond Garage. Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="../js/pages/produto.js"></script>
+
+</body>
+</html>
