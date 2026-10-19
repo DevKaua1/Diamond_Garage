@@ -159,5 +159,57 @@ main {
 }
 
 .opcoes-login a:hover {
-    color: var(--cor-destaque);
+    color: var(--texto-destaque);
+}
+
+.botao-entrar button{
+    width: 100%;
+    height: 52px;
+    background-color: var(--cor-destaque);
+    border: 0px;
+    border-radius: 5px;
+    color: var(--cor-escura);
+    font-size: 20px;
+    font-weight: 600px;
+}
+
+.botao-entrar button:hover {
+    background-color: var(--texto-destaque);
+}
+
+.caminhoCadastro {
+    border-top: 2px solid var(--texto-claro-suave);
+    padding-top: 25px;
+    gap: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.caminhoCadastro p {
+    text-align: center;
+    font-size: 15px;
+    color: var(--texto-corpo);
+}
+
+.caminhoCadastro a {
+    text-decoration: none;
+    color: var(--cor-escura);
+    font-weight: 600;
+}
+
+.caminhoCadastro a:hover {
+    color: var(--texto-destaque);
+}
+
+.nota-seguranca {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 15px;
+    color: var(--texto-suave);
+}
+
+.nota-seguranca img {
+    height: 18px;
 }
