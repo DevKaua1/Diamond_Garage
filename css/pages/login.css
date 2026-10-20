@@ -50,14 +50,24 @@ main {
 
 .lado-direito {
     background-color: var(--fundo-claro);
-    margin: 40px 60px 40px 60px;
+    padding: 40px 60px;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 28px;
 }
 
-.image-logo {
+.card {
+    width: 100%;
+    max-width: 500px;
     display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.image-logo {
+    width: 150px;
+    display: block;
     justify-content: center;
     align-items: center;
 }
@@ -85,15 +95,17 @@ main {
     padding-left: 20px;
 }
 
-.header-direita img {
-    margin: 32px;
+.header-direita {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
-.header-direita h1 {
-    color: var(--cor-escura);
-    font-size: 44px;
-    margin-bottom: 5px;
+.header-direita img{
+    width: 150px;
+    margin-bottom: 30px;
 }
+
 
 .header-direita p {
     columns: var(--texto-suave);
@@ -106,6 +118,28 @@ main {
     display: flex;
     flex-direction: column;
     gap: 8px;
+}
+
+.campo-senha {
+    position: relative;
+}
+
+.campo-senha input {
+    padding-right: 100px;
+}
+
+.campo-senha button {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--texto-destaque);
+    font-family: inherit;
+    font-size: 18px;
+    font-weight: 600;
 }
 
 .input-direita form {

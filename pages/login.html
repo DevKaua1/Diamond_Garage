@@ -10,12 +10,14 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Manrope:wght@400;500;600;700&display=swap"
         rel="stylesheet">
+        <script src="../js/pages/login.js"></script>
     <title>Login Diamond Garage</title>
 </head>
 
 <body>
     <main>
         <section class="lado-esquerdo">
+            <div class="card">
             <div class="image-logo">
                 <img src="../Images/Diamante.svg" alt="">
             </div>
@@ -33,47 +35,52 @@
 
         <!-- criando o lado direto da página home, onde tem os inputs, etc. -->
         <section class="lado-direito">
-            <div class="header-direita">
-                <img src="../Images/Logo.svg" alt="">
-                <h1>Entrar</h1>
-                <p>Acesse sua conta para comprar e acompanhar seus pedidos.</p>
-            </div>
-
-            <!-- Começando os inputs -->
-            <section class="input-direita">
-                <form>
-                    <div class="campo">
-                        <label id="email" for="email">E-mail</label>
-                        <input type="email" name="email" placeholder="você@exemplo.com">
-                    </div>
-
-                    <div class="campo">
-                        <label id="senha" for="senha">Senha</label>
-                        <input type="password" name="senha" placeholder="Sua senha">
-                    </div>
-
-                    <div class="opcoes-login">
-                        <div class="manter-conectado">
-                            <input type="checkbox" id="conectado" name="conectado">
-                            <label for="conectado">Manter conectado</label>
-                        </div>    
-                        <a href="#">Esqueci a senha</a>
-                    </div>
-
-                    <div class="button botao-entrar">
-                        <button class="entrar" type="submit">Entrar</button>
-                    </div>
-                </form>
-            </section>
-
-            <div class="caminhoCadastro">
-                <p>Ainda não tem conta? <a href="#">Criar conta</a></p>
-
-                <div class="nota-seguranca">
-                    <img src="../Images/Cadeado.svg" alt="">
-                    <p id="segurancaText">Conexão protegida. Seus dados ficam só com a Diamond Garage</p>
+            <div class="card">
+                <div class="header-direita">
+                    <img src="../Images/Logo.svg" alt="">
+                    <h1>Entrar</h1>
+                    <p>Acesse sua conta para comprar e acompanhar seus pedidos.</p>
                 </div>
-            </div>
+
+                <!-- Começando os inputs -->
+                <section class="input-direita">
+                    <form>
+                        <div class="campo">
+                            <label id="email" for="email">E-mail</label>
+                            <input type="email" name="email" placeholder="você@exemplo.com">
+                        </div>
+
+                        <div class="campo">
+                            <label id="senha" for="senha">Senha</label>
+                                <div class="campo-senha">
+                                <input type="password" name="senha" placeholder="Sua senha">
+                                <button type="button" id="mostrar-senha">Mostrar</button> 
+                            </div>
+                        </div>
+
+                        <div class="opcoes-login">
+                            <div class="manter-conectado">
+                                <input type="checkbox" id="conectado" name="conectado">
+                                <label for="conectado">Manter conectado</label>
+                            </div>
+                            <a href="#">Esqueci a senha</a>
+                        </div>
+
+                        <div class="button botao-entrar">
+                            <button class="entrar" type="submit">Entrar</button>
+                        </div>
+                    </form>
+                </section>
+
+                <div class="caminhoCadastro">
+                    <p>Ainda não tem conta? <a href="#">Criar conta</a></p>
+
+                    <div class="nota-seguranca">
+                        <img src="../Images/Cadeado.svg" alt="">
+                        <p id="segurancaText">Conexão protegida. Seus dados ficam só com a Diamond Garage</p>
+                    </div>
+                </div>
+            
         </section>
     </main>
 </body>
