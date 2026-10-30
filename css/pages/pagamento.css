@@ -101,10 +101,14 @@ border: 0;
     margin-left: 130px;
 }
 
+.pix{
+    display: none;
+}
+
 .pagamentos{
     margin-left: 35px;
     background-color: #26211a;
-  height: 570px;
+  height: 670px;
    width: 47%;
    border-radius: 15px;
 }
@@ -163,13 +167,75 @@ border-color: #d4af37;
     border-radius: 10px;
    
 }
+.num{
+    font-size: 40px;
+}
 
+.cartao img{
+    padding-top: 15px;
+    width: 400px;
+    height: 220px;
+    border-radius: 5px;
+   text-align: center;
+   margin-left: 30%;
+}
+
+.dados{
+    
+    position: absolute;
+    color: #fff;
+    top: 47%;
+    left: 23.4%;
+    }
+.titular{
+    padding-top: 12%;
+    font-size: 12px;
+    font-weight: normal;
+    color: #D9D9DA;
+}
+ .name-card{
+    font-size: 15px;
+    padding-top: 5px;
+}
+    .vali-titulo{
+        position: absolute;
+        left: 108%;  
+        top: 69.6%;
+        color: #D9D9DA;
+    font-size: 12px;
+    }
+        .vali{
+        position:absolute;
+        left: 108%;  
+        top: 84.2%;
+        color: #fff;
+    font-size: 15px;
+    }
 .qrcode{
     padding-top: 15px;
     margin-left: 34%;
     padding-bottom: 12px;
 }
-
+.inf{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 15px;
+    justify-content: center;
+    margin-left: 30%;
+    gap: 10px;
+}
+.inf input{
+    background-color: #0A0A0A;
+    padding: 12px;
+}
+.inf label{
+    color: #F2F2F2;
+    
+}
+.vd{
+    
+}
 .escan p{
     color: #c5c5c5;
     font-size: 13px;
