@@ -9,35 +9,30 @@
 </head>
 <body>
 
-   <header class="cabecalho">
-        <img class="logo-prin"  src="/Images/completa_transparente.png" alt="LOGO-PRINCIPAL"> 
-        <img class="menu"   src="/Images/png-transparent-logo-business-computer-software-service-bar-angle-company-trademark-removebg-preview.png" alt=""> 
+  <header class="cabecalho">
+    <a href="home.html"><img class="logo" src="../Images/completa_transparente.png" alt="Diamond Garage"></a>
 
-        
-        <div class="search-boss">
-            <input type="text" placeholder="Busque produto..." class="search-input">
-           <a href="">
-            <img  class="icone-busca"  src="/Images/search.png" alt="">   
-            </a> 
-          </div>
+    <div class="busca">
+      <input type="text" id="campo-busca" placeholder="Busque produto...">
+      <button id="botao-busca"><img src="../Images/search.png" alt="Buscar"></button>
+    </div>
 
-        <nav>
-           <nav>
-        <a href="home.html" id="voltar-topo">Home</a>
-         <a href="produto.html">Produtos</a>
-           <a href="#">Sobre Nós</a>
-             <a href="#">Contato</a>
-            </nav>
-            </nav>
-            <div class="cont">
-                <a class="btn-user" href="">
-                <img src="/Images/user-icon-hd.png" alt="">
-            </a>
-                <a class="btn-carrinho" href="carrinho.html">
-                <img src="/Images/cart-icon.svg" alt="Carrinho">
-                </a>
-            </div>
-    </header>
+    <nav class="menu">
+      <a href="home.html"  class="atual">Home</a>
+      <a href="produto.html" >Produtos</a>
+      <a href="sobre-nos.html">Sobre Nós</a>
+      <a href="contato.html">Contato</a>
+    </nav>
+
+    <div class="icones">
+      <a href="login.html"><img src="../Images/user-icon-hd.png" alt="Minha conta"></a>
+      <a href="carrinho.html" class="carrinho">
+        <img src="../Images/cart-icon.svg" alt="Carrinho">
+        <span id="contador-carrinho">0</span>
+      </a>
+    </div>
+  </header>
+
     
   <div class="container">
         <h6 class="titulo">DIAMOND GARAGE</h6>
@@ -114,62 +109,73 @@
     <h2 class="dest">Destaques</h2>
     <a href="produto.html">Ver todos os produtos ➜</a>
 </div>
-<div class="cards">
-<div class="p1">
-    <a href="#">
-            <img src="/Images/produto-escapamento-sem-fundo.png" alt="">
-        <h3 class="info">Escapamento Dore Esportivo Titan Fan 160</h3>
-        <div class="preco">R$ 567,99</div>
+<div class="lista" id="lista-produtos">
 
-        <button class="btn" type="button">Adicionar ao carrinho</button>
-    </a>
-</div>
+      <div class="produto" data-categoria="Escapamentos" data-preco="567.99">
+        <img src="../Images/produto-escapamento-sem-fundo.png" alt="Escapamento Dore Esportivo Titan Fan 160">
+        <h3>Escapamento Dore Esportivo Titan Fan 160</h3>
+        <p class="preco">R$ 567,99</p>
+        <p class="parcelas">10x de R$ 56,80</p>
+        <button class="comprar">Adicionar ao carrinho</button>
+      </div>
 
-<div class="p1">
-    <a href="#">
-    <img src="/Images/produto-aerofolio-sem-fundo.png" alt="">
-        <h3 class="info">Aerofólio Traseiro Universal estilo GT</h3>
-        <div class="preco">R$ 999,99</div>
-        <button class="btn" type="button">Adicionar ao carrinho</button>
-    </a>
-</div>
+      <div class="produto" data-categoria="Exterior" data-preco="999.99">
+        <img src="../Images/produto-aerofolio-sem-fundo.png" alt="Aerofólio Traseiro Universal estilo GT">
+        <h3>Aerofólio Traseiro Universal estilo GT</h3>
+        <p class="preco">R$ 999,99</p>
+        <p class="parcelas">10x de R$ 100,00</p>
+        <button class="comprar">Adicionar ao carrinho</button>
+      </div>
 
-<div class="p1">
-    <a href="#">
-    <img src="/Images/produto-volante-sem-fundo.png" alt="">
-        <h3 class="info">Volante Esportivo Gti Grafite Renault Clio</h3>
-        <div class="preco">R$ 896,43</div>
-        <button class="btn" type="button">Adicionar ao carrinho</button>
-    </a>
-</div> 
+      <div class="produto" data-categoria="Interior" data-preco="896.43">
+        <img src="../Images/produto-volante-sem-fundo.png" alt="Volante Esportivo Gti Grafite Renault Clio">
+        <h3>Volante Esportivo Gti Grafite Renault Clio</h3>
+        <p class="preco">R$ 896,43</p>
+        <p class="parcelas">10x de R$ 89,64</p>
+        <button class="comprar">Adicionar ao carrinho</button>
+      </div>
 
-<div class="p1">
-    <a href="#">
-    <img src="/Images/produto-emblema-sem-fundo.png" alt="">
-        <h3 class="info">Estrela Emblema Do Capô Mercedes</h3>
-        <div class="preco">R$ 323,87</div>
-        <button class="btn" type="button">Adicionar ao carrinho</button>
-    </a>
-</div> 
+      <div class="produto" data-categoria="Exterior" data-preco="323.87">
+        <img src="../Images/produto-emblema-sem-fundo.png" alt="Estrela Emblema Do Capô Mercedes">
+        <h3>Estrela Emblema Do Capô Mercedes</h3>
+        <p class="preco">R$ 323,87</p>
+        <p class="parcelas">10x de R$ 32,39</p>
+        <button class="comprar">Adicionar ao carrinho</button>
+      </div>
 
-<div class="p1">
-    <a href="#">
-    <img src="/Images/produto-retrovisor-sem-fundo.png" alt="">
-        <h3 class="info">Retrovisor Kawasaki Z400 Rosca Honda </h3>
-        <div class="preco">R$ 37,96</div>
-        <button class="btn" type="button">Adicionar ao carrinho</button>
-    </a>
-</div> 
+      <div class="produto" data-categoria="Exterior" data-preco="37.96">
+        <img src="../Images/produto-retrovisor-sem-fundo.png" alt="Retrovisor Kawasaki Z400 Rosca Honda">
+        <h3>Retrovisor Kawasaki Z400 Rosca Honda</h3>
+        <p class="preco">R$ 37,96</p>
+        <p class="parcelas">à vista</p>
+        <button class="comprar">Adicionar ao carrinho</button>
+      </div>
 
-<div class="p1  ">
-    <a href="#">
-    <img src="/Images/Lip splitter dianteiro.png" alt="">
-        <h3 class="info">Spoiler Dianteiro Universal Ajustável</h3>
-        <div class="preco">R$ 448,91</div>
-        <button class="btn" type="button">Adicionar ao carrinho</button>
-    </a>
-</div> 
-</div>
+      <div class="produto" data-categoria="Exterior" data-preco="448.91">
+        <img src="../Images/Lip%20splitter%20dianteiro.png" alt="Spoiler Dianteiro Universal Ajustável">
+        <h3>Spoiler Dianteiro Universal Ajustável</h3>
+        <p class="preco">R$ 448,91</p>
+        <p class="parcelas">10x de R$ 44,89</p>
+        <button class="comprar">Adicionar ao carrinho</button>
+      </div>
+
+      <div class="produto" data-categoria="Escapamentos" data-preco="55.79">
+        <img src="../Images/New_Ponteiras_HD_sem_fundo.png" alt="New Ponteiras De Escapamento">
+        <h3>New Ponteiras De Escapamento</h3>
+        <p class="preco">R$ 55,79</p>
+        <p class="parcelas">à vista</p>
+        <button class="comprar">Adicionar ao carrinho</button>
+      </div>
+
+      <div class="produto" data-categoria="Exterior" data-preco="949.00">
+        <img src="../Images/Civic_HD_sem_fundo%20(1).png" alt="Grade Frontal Esportiva Civic G10">
+        <h3>Grade Frontal Esportiva Civic G10</h3>
+        <p class="preco">R$ 949,00</p>
+        <p class="parcelas">10x de R$ 94,90</p>
+        <button class="comprar">Adicionar ao carrinho</button>
+      </div>
+
+    </div>
 <section class="ofertas">
 
     <div class="oferta">

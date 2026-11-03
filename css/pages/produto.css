@@ -228,6 +228,19 @@ a {
   background-color: #e0be4f;
 }
 
+.comprar-agora {
+  width: 100%;
+  margin-top: 8px;
+  padding: 10px 16px;
+  background: #C3A45F;
+  color: #0A0A0A;
+  border: 0;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.comprar-agora:hover { background: #F3D87F; }
+
 #vazio {
   display: none;
   text-align: center;

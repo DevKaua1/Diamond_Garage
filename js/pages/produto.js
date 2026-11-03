@@ -111,7 +111,7 @@ function adicionarAoCarrinho(produto, botao) {
   setTimeout(function () {
     botao.innerText = 'Adicionar ao carrinho';
   }, 1200);
-}
+}menu
 
 
 for (let i = 0; i < botoesFiltro.length; i++) {
@@ -139,3 +139,7 @@ campoBusca.addEventListener('keyup', mostrarProdutos);
 botaoBusca.addEventListener('click', mostrarProdutos);
 
 atualizarContador();
+
+
+
+
