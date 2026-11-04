@@ -10,7 +10,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Manrope:wght@400;500;600;700&display=swap"
         rel="stylesheet">
-        <script src="../js/pages/login.js"></script>
+        <script src="../js/pages/login.js" defer></script>
     <title>Login Diamond Garage</title>
 </head>
 
@@ -46,14 +46,14 @@
                 <section class="input-direita">
                     <form>
                         <div class="campo">
-                            <label id="email" for="email">E-mail</label>
+                            <label for="email">E-mail</label>
                             <input type="email" name="email" placeholder="você@exemplo.com">
                         </div>
 
                         <div class="campo">
-                            <label id="senha" for="senha">Senha</label>
-                                <div class="campo-senha">
-                                <input type="password" name="senha" placeholder="Sua senha">
+                            <label for="senha">Senha</label>
+                            <div class="campo-senha">
+                                <input type="password" id="senha" name="senha" placeholder="Sua senha">
                                 <button type="button" id="mostrar-senha">Mostrar</button> 
                             </div>
                         </div>

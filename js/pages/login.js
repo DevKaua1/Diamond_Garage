@@ -9,7 +9,7 @@ botaoMostrar.addEventListener('click', function() {
         campoSenha.type = 'text';
         botaoMostrar.textContent = 'Ocultar';
     } else {
-        campoSenha.type = 'passsword';
+        campoSenha.type = 'password';
         botaoMostrar.textContent = 'Mostrar';
     }
 })
