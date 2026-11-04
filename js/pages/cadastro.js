@@ -31,3 +31,19 @@ campoSenha.addEventListener('input', function () {
     requisitos[1].classList.toggle('cumprido', temLetra);
     requisitos[2].classList.toggle('cumprido', temNumero);
 });
+
+/* Guardando o e-mail do usuario para a pagina de codigo-verificacao */
+const formulario = document.querySelector('form');
+const campoEmail = document.getElementById('email');
+
+formulario.addEventListener('submit', function (evento) {
+    evento.preventDefault(); /* impede a página de recarregar */
+
+    sessionStorage.setItem('emailCadastro', campoEmail.value);
+
+    /* Novo cadastro = zera a espera do reenvio */
+    sessionStorage.removeItem('pedidosCodigo');
+    sessionStorage.removeItem('liberadoEm');
+
+    window.location.href = 'codigo-verificacao.html';
+});

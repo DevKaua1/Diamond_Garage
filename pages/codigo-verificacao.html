@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/pages/codigo-confirmacao.css">
+    <link rel="stylesheet" href="../css/pages/codigo-verificacao.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -48,7 +48,8 @@
             </form>
 
             <div class="ajuda">
-                <p>Não recebeu? Reenviar código em <span id="contador">0:30</span></p>
+                <p id="texto-espera">Não recebeu? Reenviar código em <span id="contador">0:30</span></p>
+                <p id="texto-reenvio" hidden>Não recebeu? <button type="button" id="reenviar">Reenviar código</button></p>
                 <p>Verifique também a caixa de spam ou <a href="cadastro.html">troque o e-mail</a>.</p>
             </div>
         </section>
