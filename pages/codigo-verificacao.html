@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/pages/codigo-confirmacao.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <script src="../js/pages/codigo-confirmacao.js" defer></script>
+    <title>Código de confirmação Diamond Garage</title>
+</head>
+
+<body>
+    <main>
+        <!-- Camadas decorativas do fundo: padrão de diamantes e vinheta (escurecimento nas bordas) -->
+        <div class="fundo-padrao" aria-hidden="true"></div>
+        <div class="vinheta" aria-hidden="true"></div>
+
+        <section class="card">
+            <img class="logo" src="../Images/Logo.svg" alt="Diamond Garage">
+
+            <!-- Selo com o ícone de envelope -->
+            <img class="selo-envelope" src="../Images/Selo envelope.svg" alt="">
+
+            <div class="texto">
+                <h1>Código de confirmação</h1>
+                <p>Enviamos um código de 5 números para <strong id="email-destino">voce@exemplo.com</strong>.</p>
+            </div>
+
+            <form>
+                <!-- 5 caixinhas, uma para cada dígito -->
+                <div class="codigo">
+                    <input class="digito" type="text" inputmode="numeric" maxlength="1" autocomplete="one-time-code"
+                        aria-label="Dígito 1">
+                    <input class="digito" type="text" inputmode="numeric" maxlength="1" aria-label="Dígito 2">
+                    <input class="digito" type="text" inputmode="numeric" maxlength="1" aria-label="Dígito 3">
+                    <input class="digito" type="text" inputmode="numeric" maxlength="1" aria-label="Dígito 4">
+                    <input class="digito" type="text" inputmode="numeric" maxlength="1" aria-label="Dígito 5">
+                </div>
+
+                <div class="botao-verificar">
+                    <button type="submit">Verificar</button>
+                </div>
+            </form>
+
+            <div class="ajuda">
+                <p>Não recebeu? Reenviar código em <span id="contador">0:30</span></p>
+                <p>Verifique também a caixa de spam ou <a href="cadastro.html">troque o e-mail</a>.</p>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
