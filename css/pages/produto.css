@@ -22,6 +22,10 @@ a {
   padding: 3px 40px;
 }
 
+.logo-mobile{
+  display: none;
+}
+
 .logo {
   height: 80px;
   display: block;

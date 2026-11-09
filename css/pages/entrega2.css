@@ -1,0 +1,50 @@
+:root{--bg:#1b1712;--card:#26211a;--inp:#12100c;--line:#3a3328;--txt:#f3ead9;--mut:#a79d8c;--gold:#d4af37;--gold2:#e0be4f;--erro:#ff6b6b}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--txt);font-family:Inter,"Segoe UI",system-ui,sans-serif;line-height:1.5}
+.cabecalho{background:#000;border-bottom:2px solid var(--gold);display:flex;align-items:center;justify-content:space-between;padding:10px 24px}
+.logo{height:52px;display:block}.seguro{color:var(--gold);font-size:14px;font-weight:600}
+
+.etapas{max-width:1100px;margin:26px auto 0;padding:0 20px;display:flex;gap:10px;align-items:center;font-size:14px;color:var(--mut)}
+.etapas span{display:flex;align-items:center;gap:8px}
+.etapas i{font-style:normal;width:26px;height:26px;border-radius:50%;background:var(--line);display:grid;place-items:center;font-weight:700;font-size:13px}
+.etapas .ok i,.etapas .atual i{background:var(--gold);color:#000}
+.etapas .atual{color:var(--txt);font-weight:700}
+.etapas hr{flex:0 0 40px;border:0;border-top:2px solid var(--gold);margin:0}.etapas hr.cinza{border-color:var(--line)}
+
+.ent{max-width:1100px;margin:22px auto 60px;padding:0 20px;display:grid;grid-template-columns:1.5fr 1fr;gap:24px;align-items:start}
+.caixa,.resumo{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:30px}
+h2{margin:0 0 4px;font-size:26px}.sub{margin:0 0 22px;color:var(--mut)}
+h3{margin:26px 0 12px;font-size:18px}.res-til{margin-top:0}
+
+.campos{display:grid;grid-template-columns:1fr 1fr;gap:14px 16px}
+.c-total{grid-column:1/3}
+label{display:block;font-size:13px;color:var(--mut);margin-bottom:6px}label small{color:var(--mut);opacity:.8}
+input[type=text],select{width:100%;padding:13px 14px;border:1px solid var(--line);border-radius:10px;background:var(--inp);color:var(--txt);font:inherit;font-size:15px;outline:0;transition:border-color .15s,box-shadow .15s}
+input[type=text]:focus,select:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(212,175,55,.25)}
+input::placeholder{color:#6b6252}
+.erro{border-color:#e5484d!important;box-shadow:0 0 0 3px rgba(229,72,77,.25)!important}
+.msg-erro{display:block;margin-top:4px;font-size:12px;color:var(--erro)}
+.msg-cep{display:block;margin-top:4px;font-size:12px;color:var(--mut)}
+
+.opcoes{display:grid;gap:10px}
+.opcao{display:flex;align-items:center;gap:14px;border:2px solid var(--line);border-radius:12px;padding:14px 16px;cursor:pointer;margin:0;color:var(--txt);transition:border-color .15s,background .15s}
+.opcao:hover{border-color:var(--gold)}
+.opcao.on{border-color:var(--gold);background:rgba(212,175,55,.08)}
+.opcao input{accent-color:var(--gold);width:18px;height:18px}
+.opcao div{flex:1}.opcao b{display:block;font-size:15px}.opcao small{color:var(--mut);font-size:13px}
+.opcao .preco{font-weight:700;color:var(--gold2)}
+
+.botoes{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-top:28px;flex-wrap:wrap}
+.voltar{color:var(--mut);text-decoration:none;font-size:14px}.voltar:hover{color:var(--gold2)}
+.continuar{background:var(--gold);color:#000;border:0;border-radius:12px;padding:15px 28px;font-size:16px;font-weight:700;cursor:pointer;transition:background .15s,transform .1s}
+.continuar:hover{background:var(--gold2)}.continuar:active{transform:scale(.98)}
+
+.item{display:flex;gap:12px;align-items:center;padding:12px 0;border-bottom:1px solid var(--line)}
+.item img{width:62px;height:62px;border-radius:10px;object-fit:cover;background:#c9c5bf}
+.item div{flex:1;font-size:14px;line-height:1.3}.item small{color:var(--mut)}.item b{font-size:14px;white-space:nowrap}
+.ln{display:flex;justify-content:space-between;margin:12px 0;font-size:14px;color:var(--mut)}
+.tot{display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid var(--line);padding-top:16px;margin-top:14px}
+.tot b{font-size:28px;color:var(--gold2)}
+.prazo{margin:18px 0 0;font-size:13px;color:var(--mut);background:var(--bg);border-radius:10px;padding:12px}.prazo b{color:var(--txt)}
+
+@media(max-width:860px){.ent{grid-template-columns:1fr}.campos{grid-template-columns:1fr}.c-total{grid-column:auto}.etapas em{display:none}.etapas .atual em{display:inline}.caixa,.resumo{padding:22px}.botoes{flex-direction:column-reverse;align-items:stretch;text-align:center}}
