@@ -302,3 +302,213 @@ main {
     background-color: var(--cor-destaque);
     border-color: var(--cor-destaque);
 }
+
+@media (max-width: 1600px) {
+    /* Lado esquerdo */
+    .lado-esquerdo {
+        padding: 56px 64px;
+        gap: 40px;
+    }
+
+    .image-logo img {
+        width: 357px;
+    }
+
+    .descricao-esquerda h2,
+    .descricao-direita h2 {
+        font-size: 68px;
+    }
+
+    .descricao-esquerda > p,
+    .descricao-direita > p {
+        font-size: 15px;
+    }
+
+    .texto-borda {
+        font-size: 14px;
+        padding-left: 16px;
+    }
+
+    .beneficios {
+        gap: 10px;
+        padding-top: 12px;
+    }
+
+    /* Lado direito */
+    .lado-direito {
+        padding: 32px 48px;
+    }
+
+    .card {
+        max-width: 400px;
+        gap: 28px;
+    }
+
+    .header-direita img {
+        width: 120px;
+        margin-bottom: 24px;
+    }
+
+    .header-direita h1 {
+        font-size: 44px;
+    }
+
+    .header-direita p {
+        font-size: 15px;
+    }
+
+    .campo label {
+        font-size: 14px;
+    }
+
+    .campo input {
+        height: 50px;
+        padding: 0 16px;
+        font-size: 16px;
+    }
+
+    .campo-senha input {
+        padding-right: 80px;
+    }
+
+    .campo-senha button {
+        right: 16px;
+        font-size: 14px;
+    }
+
+    .botao-entrar button {
+        height: 52px;
+        font-size: 16px;
+    }
+
+    .caminho-login,
+    .caminhoCadastro {
+        padding-top: 20px;
+    }
+
+    .caminho-login p,
+    .caminhoCadastro p {
+        font-size: 15px;
+    }
+
+    .nota-seguranca {
+        font-size: 12px;
+    }
+
+    .nota-seguranca img {
+        height: 16px;
+    }
+
+    /* Cadastro: requisitos e termos */
+    .requisitos {
+        gap: 4px;
+    }
+
+    .requisito {
+        font-size: 13px;
+    }
+
+    .marcador {
+        width: 14px;
+        height: 14px;
+    }
+
+    .termos {
+        font-size: 14px;
+    }
+
+    .termos input,
+    .opcoes-login input {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .lado-esquerdo {
+        padding: 50px;
+    }
+
+    .descricao-esquerda h2,
+    .descricao-direita h2 {
+        font-size: 60px;
+    }
+
+    .image-logo img {
+        width: 320px;
+    }
+
+    .lado-direito {
+        padding: 40px;
+    }
+}
+
+@media (max-width: 900px) {
+    main {
+        flex-direction: column;
+    }
+
+    .lado-esquerdo {
+        display: none;
+    }
+
+    .lado-direito {
+        padding: 40px 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .lado-direito {
+        padding: 32px 20px;
+    }
+
+    .card {
+        gap: 28px;
+    }
+
+    .header-direita img {
+        width: 120px;
+        margin-bottom: 20px;
+    }
+
+    .header-direita h1 {
+        font-size: 44px;
+    }
+
+    .header-direita p,
+    .caminho-login p,
+    .caminhoCadastro p {
+        font-size: 16px;
+    }
+
+    .campo label {
+        font-size: 16px;
+    }
+
+    .campo input {
+        height: 56px;
+        font-size: 18px;
+    }
+
+    .botao-entrar button {
+        height: 56px;
+        font-size: 18px;
+    }
+
+    /* Login: "Manter conectado" e "Esqueci a senha" quebram de linha se faltar espaço */
+    .opcoes-login {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    /* Cadastro */
+    .requisito {
+        font-size: 15px;
+    }
+
+    .termos {
+        align-items: flex-start;
+        font-size: 15px;
+    }
+}
+

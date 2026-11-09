@@ -45,7 +45,7 @@ main {
 .fundo-padrao {
     position: absolute;
     inset: 0;
-    background-image: url('../../Images/Padrao-diamantes.svg');
+    background-image: url('/Images/Padrão\ de\ diamantes.svg');
     background-size: cover;
     background-position: center;
     pointer-events: none;
@@ -188,4 +188,113 @@ form {
 
 .ajuda button:hover {
     color: var(--texto-destaque);
+}
+
+@media (max-width: 1600px) {
+    .card {
+        max-width: 440px;
+        padding: 40px 36px 32px;
+        gap: 24px;
+    }
+
+    .logo {
+        width: 120px;
+    }
+
+    .selo-envelope,
+    .selo-sucesso {
+        width: 72px;
+    }
+
+    .texto {
+        gap: 10px;
+    }
+
+    .texto h1 {
+        font-size: 42px;
+    }
+
+    .texto p {
+        font-size: 15px;
+    }
+
+    .ajuda p {
+        font-size: 14px;
+    }
+
+    .botao-verificar button,
+    .botao-entrar {
+        height: 52px;
+        font-size: 16px;
+    }
+
+    /* E-mail verificado */
+    .email-confirmado {
+        padding: 6px 16px;
+    }
+
+    .email-confirmado span {
+        font-size: 14px;
+    }
+
+    /* Código de confirmação */
+    form {
+        gap: 24px;
+    }
+
+    .codigo {
+        gap: 10px;
+    }
+
+    .digito {
+        width: 56px;
+        height: 60px;
+        font-size: 26px;
+    }
+}
+
+main {
+    padding: 24px 16px;
+    /* ...o resto continua igual */
+}
+
+/* E-mails compridos quebram de linha em vez de estourar o card */
+.texto strong,
+.email-confirmado span {
+    overflow-wrap: anywhere;
+}
+
+@media (max-width: 480px) {
+    .card {
+        padding: 32px 20px 28px;
+        gap: 24px;
+    }
+
+    .logo {
+        width: 120px;
+    }
+
+    .selo-envelope,
+    .selo-sucesso {
+        width: 72px;
+    }
+
+    .texto h1 {
+        font-size: 40px;
+    }
+
+    .texto p,
+    .caminho-login p {
+        font-size: 17px;
+    }
+
+    .ajuda p {
+        font-size: 16px;
+    }
+
+    .botao-verificar button,
+    .botao-entrar {
+        height: 56px;
+        font-size: 18px;
+    }
 }
