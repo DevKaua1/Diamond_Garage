@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/pages/cadastro.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Manrope:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script src="../js/pages/cadastro.js" defer></script>
+    <title>Cadastro Diamond Garage</title>
+</head>
+
+<body>
+    <main>
+        <!-- Lado esquerdo: diamante, título e benefícios -->
+        <section class="lado-esquerdo">
+            <div class="image-logo">
+                <img src="../Images/Diamante.svg" alt="">
+            </div>
+
+            <div class="descricao-esquerda">
+                <h2>Sua garagem começa aqui.</h2>
+                <p>Crie sua conta e encontre peças para reposição, desempenho e acabamento em um só lugar.</p>
+
+                <div class="beneficios">
+                    <p class="texto-borda">Acompanhe cada pedido do início ao fim</p>
+                    <p class="texto-borda">Finalize suas compras em poucos cliques</p>
+                    <p class="texto-borda">Acesse peças exclusivas da loja</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lado direito: card com o formulário de cadastro -->
+        <section class="lado-direito">
+            <div class="card">
+                <div class="header-direita">
+                    <img src="../Images/Logo.svg" alt="Diamond Garage">
+                    <h1>Criar conta</h1>
+                    <p>Leva menos de um minuto. Você confirma o e-mail no próximo passo.</p>
+                </div>
+
+                <!-- Começando os inputs -->
+                <section class="input-direita">
+                    <form>
+                        <div class="campo">
+                            <label for="nome">Nome completo</label>
+                            <input type="text" id="nome" name="nome" placeholder="Como você se chama">
+                        </div>
+
+                        <div class="campo">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" name="email" placeholder="você@exemplo.com">
+                        </div>
+
+                        <!-- Senha + lista de requisitos logo abaixo -->
+                        <div class="senha-requisitos">
+                            <div class="campo">
+                                <label for="senha">Senha</label>
+                                <div class="campo-senha">
+                                    <input type="password" id="senha" name="senha" placeholder="Crie uma senha">
+                                    <button type="button" id="mostrar-senha">Mostrar</button>
+                                </div>
+                            </div>
+
+                            <ul class="requisitos">
+                                <li class="requisito"><span class="marcador"></span>Pelo menos 8 caracteres</li>
+                                <li class="requisito"><span class="marcador"></span>Uma letra</li>
+                                <li class="requisito"><span class="marcador"></span>Um número</li>
+                            </ul>
+                        </div>
+
+                        <div class="termos">
+                            <input type="checkbox" id="termos" name="termos">
+                            <label for="termos">Li e aceito os <a href="#">Termos de Uso</a> e a <a href="#">Política de Privacidade</a>.</label>
+                        </div>
+
+                        <div class="botao-entrar">
+                            <button class="entrar" href="../pages/" type="submit">Criar conta</button>
+                        </div>
+                    </form>
+                </section>
+
+                <div class="caminho-login">
+                    <p>Já tem conta? <a href="login.html">Entrar</a></p>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

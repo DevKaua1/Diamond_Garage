@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/pages/email-verificado.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <script src="../js/pages/email-verificado.js" defer></script>
+    <title>E-mail verificado Diamond Garage</title>
+</head>
+
+<body>
+    <main>
+        <!-- Camadas decorativas do fundo: padrão de diamantes e vinheta -->
+        <div class="fundo-padrao" aria-hidden="true"></div>
+        <div class="vinheta" aria-hidden="true"></div>
+
+        <section class="card">
+            <img class="logo" src="../Images/Logo.svg" alt="Diamond Garage">
+
+            <!-- Selo de sucesso (círculo com o check) -->
+            <img class="selo-sucesso" src="../Images/Selo de sucesso.svg" alt="">
+
+            <div class="texto">
+                <h1>E-mail verificado!</h1>
+                <p>Sua conta na Diamond Garage está pronta. Agora é só entrar e escolher suas peças.</p>
+            </div>
+
+            <!-- "Pílula" com o e-mail confirmado -->
+            <div class="email-confirmado">
+                <span id="email-confirmado">voce@exemplo.com</span>
+            </div>
+
+            <!-- É um link (leva para outra página), por isso <a> e não <button> -->
+            <a class="botao-entrar" href="login.html">Entrar</a>
+
+            <div class="ajuda">
+                <p>Algo errado? <a href="contato.html">Fale com a gente</a></p>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
