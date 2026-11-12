@@ -394,4 +394,53 @@
   margin-bottom: 20px;
   font-weight: 600;
 }
+/* Pop-up de comprovante */
+.comprovante {
+  margin: auto; /* o reset "* { margin: 0 }" tira o centralizado padrão do dialog */
+  width: min(480px, calc(100% - 32px));
+  background: var(--card);
+  color: var(--text);
+  border: 1px solid var(--gold);
+  border-radius: var(--radius);
+  padding: 0;
+}
+
+.comprovante::backdrop {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.comprovante-conteudo {
+  padding: 30px;
+}
+
+.comprovante h2 {
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+  color: var(--sucesso);
+}
+
+.comprovante-intro {
+  color: var(--text-soft);
+  margin-bottom: 24px;
+}
+
+.comprovante-linha {
+  border-left: 3px solid var(--gold);
+  padding-left: 14px;
+  margin-bottom: 16px;
+}
+
+.comprovante-linha small {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.comprovante-linha span {
+  display: block;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  max-height: 120px;
+  overflow-y: auto;
+}
     
