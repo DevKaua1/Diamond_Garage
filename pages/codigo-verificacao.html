@@ -32,14 +32,17 @@
             </div>
 
             <form>
-                <!-- 5 caixinhas, uma para cada dígito -->
-                <div class="codigo">
-                    <input class="digito" type="text" inputmode="numeric" maxlength="1" autocomplete="one-time-code"
-                        aria-label="Dígito 1">
-                    <input class="digito" type="text" inputmode="numeric" maxlength="1" aria-label="Dígito 2">
-                    <input class="digito" type="text" inputmode="numeric" maxlength="1" aria-label="Dígito 3">
-                    <input class="digito" type="text" inputmode="numeric" maxlength="1" aria-label="Dígito 4">
-                    <input class="digito" type="text" inputmode="numeric" maxlength="1" aria-label="Dígito 5">
+                <!-- 5 caixinhas, uma para cada dígito, e a mensagem de erro logo abaixo -->
+                <div class="campo-codigo">
+                    <div class="codigo">
+                        <input class="digito" type="text" inputmode="numeric" maxlength="1" autocomplete="one-time-code"
+                            aria-label="Dígito 1">
+                        <input class="digito" type="text" inputmode="numeric" maxlength="1" aria-label="Dígito 2">
+                        <input class="digito" type="text" inputmode="numeric" maxlength="1" aria-label="Dígito 3">
+                        <input class="digito" type="text" inputmode="numeric" maxlength="1" aria-label="Dígito 4">
+                        <input class="digito" type="text" inputmode="numeric" maxlength="1" aria-label="Dígito 5">
+                    </div>
+                    <p class="erro" id="erro-codigo"></p>
                 </div>
 
                 <div class="botao-verificar">

@@ -190,6 +190,31 @@ form {
     color: var(--texto-destaque);
 }
 
+:root {
+    --texto-erro: #B3261E;
+}
+
+.campo-codigo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.erro {
+    font-size: 14px;
+    text-align: center;
+    color: var(--texto-erro);
+}
+
+.erro:empty {
+    display: none;
+}
+
+.digito.com-erro {
+    border-color: var(--texto-erro);
+}
+
 @media (max-width: 1600px) {
     .card {
         max-width: 440px;
