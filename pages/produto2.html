@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Produto | Diamond Garage</title>
+  <link rel="stylesheet" href="../css/pages/produto2.css">
+  <link rel="shortcut icon" href="../Images/simbolo_transparente.png">
+</head>
+<body>
+
+  <header class="cabecalho">
+    <a href="home.html"><img class="logo" src="../Images/completa_transparente.png" alt="Diamond Garage"></a>
+
+    <nav class="menu">
+      <a href="home.html">Home</a>
+      <a href="produto.html" class="atual">Produtos</a>
+      <a href="sobre-nos.html">Sobre Nós</a>
+      <a href="contato.html">Contato</a>
+    </nav>
+
+    <div class="icones">
+      <a href="login.html"><img src="../Images/user-icon-hd.png" alt="Minha conta"></a>
+      <a href="carrinho.html" class="carrinho">
+        <img src="../Images/cart-icon.svg" alt="Carrinho">
+        <span id="contador-carrinho">0</span>
+      </a>
+    </div>
+  </header>
+
+  <main class="principal">
+
+    <p class="caminho">
+      <a href="home.html">Home</a> &gt;
+      <a href="produto.html">Produtos</a> &gt;
+      <span id="caminho-nome"></span>
+    </p>
+
+    <section id="detalhe" class="detalhe">
+
+      <div class="foto">
+        <img id="imagem" src="" alt="">
+      </div>
+
+      <div class="dados">
+        <p id="categoria" class="categoria"></p>
+        <h1 id="nome"></h1>
+
+        <p id="preco" class="preco"></p>
+        <p id="parcelas" class="parcelas"></p>
+        <p id="pix" class="pix"></p>
+
+        <p id="descricao" class="descricao"></p>
+
+        <div class="quantidade">
+          <span>Quantidade</span>
+          <button onclick="diminuir()">-</button>
+          <strong id="quantidade">1</strong>
+          <button onclick="aumentar()">+</button>
+        </div>
+
+        <div class="botoes">
+          <button class="btn-carrinho" onclick="adicionar()" id="btn-adicionar">Adicionar ao carrinho</button>
+          <button class="btn-comprar" onclick="comprarAgora()">Comprar agora</button>
+        </div>
+
+        <ul class="beneficios">
+          <li>🚚 Entrega para todo o Brasil</li>
+          <li>💳 Em até 10x no cartão de crédito</li>
+          <li>🔒 Compra segura</li>
+          <li>💬 Suporte no WhatsApp</li>
+        </ul>
+      </div>
+
+    </section>
+
+    <section id="nao-encontrado">
+      <h2>Produto não encontrado</h2>
+      <p>Esse produto não existe ou foi removido.</p>
+      <a href="produto.html" class="btn-comprar">Ver todos os produtos</a>
+    </section>
+
+
+  </main>
+
+  <footer class="rodape">
+    <div class="colunas">
+      <div>
+        <h4>Diamond Garage</h4>
+        <p>Peças e acessórios esportivos para quem leva o carro a sério.</p>
+      </div>
+      <div>
+        <h4>Menu</h4>
+        <a href="home.html">Home</a>
+        <a href="produto.html">Produtos</a>
+        <a href="sobre-nos.html">Sobre Nós</a>
+        <a href="contato.html">Contato</a>
+      </div>
+      <div>
+        <h4>Contato</h4>
+        <a href="https://wa.link/8gk5db">WhatsApp</a>
+        <a href="https://www.instagram.com/diamond_garagerj">Instagram</a>
+        <a href="mailto:diamondgarage@gmail.com">diamondgarage@gmail.com</a>
+      </div>
+      <div>
+        <h4>Pagamento</h4>
+        <p>Cartão · Pix · Boleto</p>
+      </div>
+    </div>
+    <p class="copy">© 2026 Diamond Garage. Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="../js/pages/produto2.js"></script>
+
+</body>
+</html>
