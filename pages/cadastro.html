@@ -45,15 +45,17 @@
 
                 <!-- Começando os inputs -->
                 <section class="input-direita">
-                    <form>
+                    <form novalidate>
                         <div class="campo">
                             <label for="nome">Nome completo</label>
                             <input type="text" id="nome" name="nome" placeholder="Como você se chama">
+                            <p class="erro" id="erro-nome"></p>
                         </div>
 
                         <div class="campo">
                             <label for="email">E-mail</label>
                             <input type="email" id="email" name="email" placeholder="você@exemplo.com">
+                            <p class="erro" id="erro-email"></p>
                         </div>
 
                         <!-- Senha + lista de requisitos logo abaixo -->
@@ -71,15 +73,19 @@
                                 <li class="requisito"><span class="marcador"></span>Uma letra</li>
                                 <li class="requisito"><span class="marcador"></span>Um número</li>
                             </ul>
+                            <p class="erro" id="erro-senha"></p>
                         </div>
 
-                        <div class="termos">
-                            <input type="checkbox" id="termos" name="termos">
-                            <label for="termos">Li e aceito os <a href="#">Termos de Uso</a> e a <a href="#">Política de Privacidade</a>.</label>
+                        <div class="campo-termos">
+                            <div class="termos">
+                                <input type="checkbox" id="termos" name="termos">
+                                <label for="termos">Li e aceito os <a href="#">Termos de Uso</a> e a <a href="#">Política de Privacidade</a>.</label>
+                            </div>
+                            <p class="erro" id="erro-termos"></p>
                         </div>
 
                         <div class="botao-entrar">
-                            <button class="entrar" href="../pages/" type="submit">Criar conta</button>
+                            <button class="entrar" type="submit">Criar conta</button>
                         </div>
                     </form>
                 </section>

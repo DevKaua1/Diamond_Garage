@@ -128,9 +128,16 @@ for (let i = 0; i < botoesFiltro.length; i++) {
 
 for (let i = 0; i < produtos.length; i++) {
   const botao = produtos[i].querySelector('.comprar');
+  const link = produtos[i].querySelector('a').getAttribute('href');
 
   botao.addEventListener('click', function () {
     adicionarAoCarrinho(produtos[i], botao);
+  });
+
+  produtos[i].addEventListener('click', function (evento) {
+    if (evento.target != botao) {
+      window.location.href = link;
+    }
   });
 }
 
@@ -139,7 +146,3 @@ campoBusca.addEventListener('keyup', mostrarProdutos);
 botaoBusca.addEventListener('click', mostrarProdutos);
 
 atualizarContador();
-
-
-
-

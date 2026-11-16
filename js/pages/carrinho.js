@@ -92,12 +92,13 @@ function aumentar(posicao) {
   mostrarCarrinho();
 }
 
-
 function diminuir(posicao) {
   const carrinho = pegarCarrinho();
 
   if (carrinho[posicao].quantidade > 1) {
     carrinho[posicao].quantidade--;
+  } else {
+    carrinho.splice(posicao, 1);
   }
 
   salvarCarrinho(carrinho);

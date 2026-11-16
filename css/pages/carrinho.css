@@ -8,6 +8,9 @@
 body {
   background-color: #1b1712;
   color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 a {
@@ -110,9 +113,11 @@ a {
 }
 
 .principal {
+  width: 100%;
   max-width: 1100px;
   margin: 0 auto;
   padding: 30px 20px 0;
+  flex: 1;
 }
 
 .principal h1 {

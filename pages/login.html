@@ -44,18 +44,20 @@
 
                 <!-- Começando os inputs -->
                 <section class="input-direita">
-                    <form>
+                    <form novalidate>
                         <div class="campo">
                             <label for="email">E-mail</label>
-                            <input type="email" name="email" placeholder="você@exemplo.com">
+                            <input type="email" id="email" name="email" placeholder="você@exemplo.com">
+                            <p class="erro" id="erro-email"></p>
                         </div>
 
                         <div class="campo">
                             <label for="senha">Senha</label>
                             <div class="campo-senha">
                                 <input type="password" id="senha" name="senha" placeholder="Sua senha">
-                                <button type="button" id="mostrar-senha">Mostrar</button> 
+                                <button type="button" id="mostrar-senha">Mostrar</button>
                             </div>
+                            <p class="erro" id="erro-senha"></p>
                         </div>
 
                         <div class="opcoes-login">

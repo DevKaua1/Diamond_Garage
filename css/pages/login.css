@@ -108,7 +108,7 @@ main {
 
 
 .header-direita p {
-    columns: var(--texto-suave);
+    color: var(--texto-suave);
     font-size: 15px;
 }
 
@@ -204,7 +204,7 @@ main {
     border-radius: 5px;
     color: var(--cor-escura);
     font-size: 20px;
-    font-weight: 600px;
+    font-weight: 600;
 }
 
 .botao-entrar button:hover {
@@ -367,6 +367,20 @@ main {
         width: 20px;
         height: 20px;
     }
+}
+
+.erro {
+    font-size: 14px;
+    color: var(--texto-erro);
+}
+
+/* Sem mensagem, o <p> some e não ocupa espaço */
+.erro:empty {
+    display: none;
+}
+
+.campo.com-erro input {
+    border-color: var(--texto-erro);
 }
 
 @media (max-width: 1200px) {

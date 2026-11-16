@@ -117,3 +117,52 @@ const emailSalvo = sessionStorage.getItem('emailCadastro');
 if (emailSalvo) {
     emailDestino.textContent = emailSalvo;
 }
+
+/* ---------- Validação do código ---------- */
+const formulario = document.querySelector('form');
+const erroCodigo = document.getElementById('erro-codigo');
+
+/* Tira a mensagem e a borda vermelha de todas as caixinhas */
+function limparErroCodigo() {
+    erroCodigo.textContent = '';
+
+    digitos.forEach(function (digito) {
+        digito.classList.remove('com-erro');
+    });
+}
+
+/* Ao digitar ou colar, o erro some */
+digitos.forEach(function (digito) {
+    digito.addEventListener('input', limparErroCodigo);
+    digito.addEventListener('paste', limparErroCodigo);
+});
+
+formulario.addEventListener('submit', function (evento) {
+    evento.preventDefault();
+
+    let codigo = '';
+    let primeiroVazio = null; /* null = "ainda não achei nenhuma vazia" */
+
+    digitos.forEach(function (digito) {
+        codigo += digito.value; /* junta os dígitos: "1", "2"... vira "12..." */
+
+        if (digito.value === '') {
+            digito.classList.add('com-erro');
+
+            if (primeiroVazio === null) {
+                primeiroVazio = digito;
+            }
+        }
+    });
+
+    /* Se juntou menos de 5 dígitos, falta preencher alguma */
+    if (codigo.length < digitos.length) {
+        erroCodigo.textContent = 'Digite os 5 números do código.';
+        primeiroVazio.focus(); /* leva o cursor para a primeira caixinha vazia */
+        return;
+    }
+
+    /* Provisório: sem servidor ainda não dá para conferir se o código está certo.
+       Por enquanto, qualquer código completo avança. */
+    window.location.href = 'email-verificado.html';
+});
