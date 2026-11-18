@@ -1,7 +1,3 @@
-// =====================================================
-// contato.js — Validação do formulário de contato
-// Diamond Garage
-// =====================================================
 
 // 1) Pegando os elementos da página ------------------
 const formulario = document.querySelector("form");
@@ -10,15 +6,9 @@ const campoEmail = document.getElementById("email");
 const campoAssunto = document.getElementById("assunto");
 const campoMensagem = document.getElementById("mensagem");
 
-// Lista com todos os campos, na mesma ordem em que aparecem na tela.
-// Usamos essa ordem para saber qual é o "primeiro campo com erro".
+
 const campos = [campoNome, campoEmail, campoAssunto, campoMensagem];
 
-
-// 2) Regras de validação -----------------------------
-// Cada função recebe o texto digitado e devolve:
-//   - uma mensagem de erro (texto), se algo estiver errado
-//   - "" (texto vazio), se estiver tudo certo
 const regras = {
   nome(valor) {
     if (valor === "") return "Digite seu nome completo.";
@@ -51,11 +41,8 @@ const regras = {
 };
 
 
-// 3) Funções que mostram e removem os erros ----------
-
-// Mostra a mensagem de erro embaixo do campo e destaca ele em vermelho
 function mostrarErro(campo, mensagem) {
-  const caixa = campo.parentElement; // a <div class="field"> do campo
+  const caixa = campo.parentElement; 
 
   // Procura o <span> de erro; se ainda não existir, cria um
   let erro = caixa.querySelector(".mensagem-erro");
@@ -99,10 +86,6 @@ function validarCampo(campo) {
   return true;
 }
 
-
-// 4) Comprovante de envio (pop-up) -------------------
-
-// Gera um número de protocolo, por exemplo: DG-20261112-4827
 function gerarProtocolo() {
   const agora = new Date();
   const ano = agora.getFullYear();
@@ -121,7 +104,7 @@ function criarLinha(titulo, valor) {
   rotulo.textContent = titulo;
 
   const conteudo = document.createElement("span");
-  conteudo.textContent = valor; // textContent é seguro: não interpreta HTML digitado
+  conteudo.textContent = valor;
 
   linha.append(rotulo, conteudo);
   return linha;
@@ -185,8 +168,6 @@ function mostrarComprovante(dados) {
   janela.showModal(); // abre como pop-up por cima de tudo
 }
 
-
-// 5) O que acontece quando o usuário clica em "Enviar" ----
 formulario.addEventListener("submit", function (evento) {
   // Impede o envio automático da página. Nós decidimos se envia ou não.
   evento.preventDefault();
@@ -206,10 +187,7 @@ formulario.addEventListener("submit", function (evento) {
     primeiroComErro.focus();
     return;
   }
-
-  // Tudo certo!
-  // IMPORTANTE: guardamos os dados ANTES de limpar o formulário,
-  // senão o comprovante apareceria vazio.
+  
   const dados = {
     protocolo: gerarProtocolo(),
     dataHora: new Date().toLocaleString("pt-BR"),
@@ -225,10 +203,9 @@ formulario.addEventListener("submit", function (evento) {
 });
 
 
-// 6) Validação em tempo real -------------------------
 campos.forEach(function (campo) {
 
-  // blur = o usuário saiu do campo. Nesse momento conferimos o que ele digitou.
+  // Nesse momento conferimos o que o usuário digitou.
   campo.addEventListener("blur", function () {
     validarCampo(campo);
   });

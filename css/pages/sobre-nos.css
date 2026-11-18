@@ -34,10 +34,13 @@ body {
 
 .busca {
   position: relative;
+  flex: 1;
+  max-width: 650px;
+  margin: 0 24px;
 }
 
 .busca input {
-  width: 650px;
+  width: 100%;
   padding: 12px 60px 12px 15px;
   border: none;
   border-radius: 18px;
@@ -65,6 +68,7 @@ body {
   color: white;
   margin: 0 15px;
   text-decoration: none;
+  white-space: nowrap;
 }
 
 .menu a:hover {
@@ -502,7 +506,7 @@ body {
 .rodape-conteudo {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 44px 0 48px;
+  padding: 44px 24px 48px;
   display: grid;
   grid-template-columns: 1.4fr 1fr 1fr 1fr;
   gap: 28px;
@@ -574,5 +578,51 @@ body {
   .banner .texto { font-size: 1.05rem; }
   .historia-texto h2 { font-size: 1.9rem; }
   .rodape-conteudo { grid-template-columns: 1fr; }
+}
+@media (max-width: 1000px) {
+  .cabecalho {
+    flex-wrap: wrap;
+    padding: 8px 20px;
+    row-gap: 8px;
+  }
+
+  .cabecalho > a:first-child { order: 1; }  /* logo */
+  .icones { order: 2; }
+  .busca {
+    order: 3;
+    flex: 1 1 100%;
+    max-width: none;
+    margin: 0;
+  }
+  .menu {
+    order: 4;
+    flex: 1 1 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    row-gap: 4px;
+  }
+
+  .logo { height: 56px; }
+  .icones img { width: 36px; height: 36px; }
+}
+
+@media (max-width: 560px) {
+  .busca input { font-size: 16px; } 
+  .menu a { margin: 0 8px; font-size: 0.95rem; }
+}
+@media (max-width: 800px) {
+  .valores-grid { grid-template-columns: 1fr; }
+  .numeros-lista {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px 0;
+  }
+}
+@media (max-width: 560px) {
+  .banner { padding: 48px 20px; }
+  .secao h2 { font-size: 1.5rem; }
+  .numero-item strong { font-size: 2rem; }
+  .beneficios-grid { grid-template-columns: 1fr; }
+  .cta-botoes .btn { width: 100%; }
 }
 
