@@ -344,6 +344,10 @@ margin-left: 100px;
   gap: 30px;
 }
 
+.lista a {
+  text-decoration: none;
+}
+
 .produto {
   background-color: #26211a;
   border: 1px solid white;
@@ -366,11 +370,11 @@ margin-left: 100px;
 }
 
 .produto h3 {
+  color: #fff;
   font-size: 18px;
   font-weight: normal;
   padding: 16px 16px 0;
   min-height: 70px;
-  color: #fff;
 }
 
 .preco {
