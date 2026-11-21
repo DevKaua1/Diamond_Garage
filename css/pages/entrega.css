@@ -8,6 +8,7 @@ body{
       background: #1b1712;
   line-height: 1.5;
 
+
 }
 .cabecalho{
 display: flex;
@@ -18,9 +19,11 @@ background: #020202;
 box-shadow: 0 2px 0 #d4af37;
 
 
+
+
 }
 .cabecalho img {
-    height: 80px; 
+    height: 80px;
     width: auto;
 }
 nav a{
@@ -30,21 +33,26 @@ nav a{
     text-align: center;
     cursor: pointer;
 
+
 }
+
 
 .ben{
     display: flex;
     color: #fff;
     align-items: flex-end;
     gap: 8px;
-     color: #e0be4f; 
+     color: #e0be4f;
     font-weight: 700;
 
+
 }
+
 
 .ben i {
     font-style: normal;
 }
+
 
 .etapas{
     display: flex;
@@ -61,6 +69,7 @@ align-items: center;
 gap: 8px;
 }
 
+
 .etapas i {
     font-style: normal;
     width: 26px;
@@ -73,13 +82,16 @@ gap: 8px;
   font-size: 13px;
 }
 
+
 .etapas .ok i,
 .etapas .confirm i {
 background: #d4af37;
   color: #000;
   border-top: 2px solid #3a3328;
 
+
 }
+
 
 .etapas .confirm{
     color: #fff;
@@ -92,10 +104,12 @@ border: 0;
   margin: 0;
 }
 
+
 .global{
     display: flex;
 gap: 15px;
 }
+
 
 h2{
       font-size: 26px;
@@ -118,9 +132,10 @@ margin: 0 0 4px;
     width: 100%;
 }
 .sub{
-margin: 0 0 22px;           
+margin: 0 0 22px;          
   color: #a79d8c;
 }
+
 
 .cont input{
     background-color: #12100c;
@@ -134,16 +149,19 @@ margin: 0 0 22px;
     font-size: 12px;
 }
 
+
 .dados{
     display: flex;
     gap: 37px;
 }
+
 
 .cpf{
     display: flex;
     flex-direction: column;
     gap: 5px;
 }
+
 
 #cpf{
     width: 110%;
@@ -153,12 +171,14 @@ margin: 0 0 22px;
     width: 127%;
     border: 1px solid #3a3328
 
+
 }
 .tel{
     display: flex;
     flex-direction: column;
     gap: 5px;
 }
+
 
 .endereco{
     display: flex;
@@ -169,6 +189,7 @@ margin: 0 0 22px;
     gap: 55px;
 }
 
+
 .num{
     display: flex;
     flex-direction: column;
@@ -176,7 +197,7 @@ margin: 0 0 22px;
 }
 #numero{
     width: 114%;
-    border: 1px solid #3a3328   
+    border: 1px solid #3a3328  
 }
 #complemento{
     width: 109%;
@@ -191,6 +212,7 @@ gap: 5px;
     border: 1px solid #3a3328
 }
 
+
 .rua{
     display: flex;
     gap: 5px;
@@ -200,16 +222,20 @@ gap: 5px;
     width: 100%;
 }
 
+
 .bairro{
     display: flex;
     flex-direction: column;
     gap: 5px;
 }
 
+
 #bairro{
     width: 100%;
 
+
 }
+
 
 .lugar{
     display: flex;
@@ -221,9 +247,11 @@ gap: 5px;
     gap: 5px;
 }
 
+
 #cidade {
     width: 170px;
 }
+
 
 .estado{
     display: flex;
@@ -231,18 +259,20 @@ gap: 5px;
     gap: 5px;
 }
 
+
 input[type=text], select {
   width: 33vh;                  
-  padding: 13px 14px;           
-  border: 1px solid #3a3328;   
+  padding: 13px 14px;          
+  border: 1px solid #3a3328;  
   border-radius: 10px;        
   background: #12100c;          
   color: #f3ead9;              
   font: inherit;                
   font-size: 15px;
-  outline: 0;             
+  outline: 0;            
   transition: border-color .15s, box-shadow .15s;
 }
+
 
 h3 {
   margin: 26px 0 12px;
@@ -250,10 +280,12 @@ h3 {
   color: #fff;
 }
 
+
 .opcoes {
   display: grid;
   gap: 10px;                          
 }
+
 
 .opcao {
   display: flex;                    
@@ -268,39 +300,48 @@ h3 {
   transition: border-color .15s, background .15s;
 }
 
+
 .opcao:hover {
-  border-color: #d4af37;             
+  border-color: #d4af37;            
 }
 
-.opcao.on {                         
+
+.opcao.on {                        
   border-color: #d4af37;
   background: rgba(212, 175, 55, .08);
 }
 
+
 .opcao input {                        
-  accent-color: #d4af37;             
+  accent-color: #d4af37;            
   width: 18px;
   height: 18px;
 }
 
+
 .opcao div {                          
   flex: 1;                            
 }
+
 
 .opcao b {                            
   display: block;
   font-size: 15px;
 }
 
+
 .opcao small {                        
   color: #a79d8c;
   font-size: 13px;
 }
 
+
 .opcao .preco {                      
   font-weight: 700;
   color: #e0be4f;
 }
+
+
 
 
 .botoes {
@@ -312,15 +353,18 @@ h3 {
   flex-wrap: wrap;
 }
 
+
 .voltar {
   color: #a79d8c;
   text-decoration: none;
   font-size: 14px;
 }
 
+
 .voltar:hover {
   color: #e0be4f;
 }
+
 
 .continuar {
   background: #d4af37;
@@ -334,13 +378,17 @@ h3 {
   transition: background .15s, transform .1s;
 }
 
+
 .continuar:hover {
   background: #e0be4f;
 }
 
+
 .continuar:active {
-  transform: scale(.98);           
+  transform: scale(.98);          
 }
+
+
 
 
 .erro {
@@ -348,12 +396,14 @@ h3 {
   box-shadow: 0 0 0 3px rgba(229, 72, 77, .25) !important;
 }
 
+
 .msg-erro {
   display: block;
   margin-top: 4px;
   font-size: 12px;
   color: #ff6b6b;
 }
+
 
 .resumo {
   background: #26211a;                
@@ -364,7 +414,7 @@ h3 {
   height: 50%;
 }
 .res-til {
-  margin: 0 0 14px;                   
+  margin: 0 0 14px;                  
   font-size: 18px;
 }
 .item {
@@ -372,9 +422,10 @@ h3 {
   gap: 12px;
   align-items: center;
   padding: 12px 0;
-  border-bottom: 1px solid #3a3328;   
+  border-bottom: 1px solid #3a3328;  
   color: #fff;
 }
+
 
 .item img {
   width: 62px;
@@ -384,29 +435,36 @@ h3 {
   background: #c9c5bf;                
 }
 
-.item div {                           
+
+.item div {                          
   flex: 1;                            
   font-size: 14px;
   line-height: 1.3;
 }
 
-.item small {                         
+
+.item small {                        
   color: #a79d8c;
 }
 
-.item b {                             
+
+.item b {                            
   font-size: 14px;
   white-space: nowrap;                
 }
 
 
+
+
 .ln {
   display: flex;
-  justify-content: space-between;     
+  justify-content: space-between;    
   margin: 12px 0;
   font-size: 14px;
   color: #a79d8c;
 }
+
+
 
 
 .tot {
@@ -418,14 +476,18 @@ h3 {
   margin-top: 14px;
 }
 
+
 .tot b {                              
   font-size: 28px;
-  color: #e0be4f;                     
+  color: #e0be4f;                    
 }
+
 
 .tot span {
     color: #fff;
 }
+
+
 
 
 .prazo {
@@ -437,6 +499,165 @@ h3 {
   padding: 12px;
 }
 
+
 .prazo b {                            
-  color: #f3ead9;                     
+  color: #f3ead9;                    
+}
+
+
+.etapas-m{
+  display: none;
+}
+
+
+.voltar-m{
+  display: none;
+
+
+}
+
+
+@media (max-width:480px){
+  .etapas{
+    display: none;
+  }
+  .etapas-m{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-size: 14px;
+    color: #a79d8c;
+    padding: 20px;
+    margin-left: 11%;
+}
+.etapas-m span {
+   display: flex;
+align-items: center;
+gap: 8px;
+}
+
+
+.etapas-m i {
+    font-style: normal;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: #3a3328;
+    display: grid;
+     place-items: center;
+     font-weight: 800;
+  font-size: 13px;
+}
+
+
+.etapas-m .ok i,
+.etapas-m .confirm i {
+background: #d4af37;
+  color: #000;
+  border-top: 2px solid #3a3328;
+
+
+}
+
+
+.etapas-m .confirm{
+    color: #fff;
+  font-weight: 700;
+}
+.etapas-m hr{
+    flex: 0 0 40px;
+border: 0;
+  border-top: 2px solid #3a3328;
+  margin: 0;
+}
+
+.cabecalho{
+          padding: 2px; 
+}
+
+
+  .global{
+    flex-direction: column;
+  }
+
+
+  .cont{
+    width: 90%;
+    margin-left: 5%;
+  }
+.dados{
+  flex-direction: column;
+  gap: 13px;
+}
+  #telefone{
+    width: 104%;
+  }
+  #numero{
+    width: 104%;
+  }
+  #name {
+    width: 104%;
+  }
+  #cpf{
+    width: 104%;
+  }
+  #cep {
+    width: 293px;
+  }
+  .address {
+    gap: 13px;
+    flex-direction: column;
+  }
+  .comple {
+    WIDTH: 241px;
+  }
+  #complemento {
+    width: 124%;
+  }
+#bairro{
+  width: 104%;
+}
+  #rua{
+    width: 104%;
+  }
+  #cidade {
+    width: 104%;
+  }
+
+
+  .lugar{
+    flex-direction: column;
+  }
+
+
+  input[type=text], select {
+    width: 36vh;
+  }
+
+
+  .resumo{
+    width: 89%;
+    margin-left: 24px;
+  }
+  .continuar{
+    margin-left: 25px;
+  }
+  .voltar{
+    display: none;
+  }
+  .voltar-m {
+    color: #a79d8c;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+  }
+ 
+  .voltar:hover {
+    color: #e0be4f;
+  }
+  .voltar-m{
+margin-left: 25%  ;
+  }
+
+
 }

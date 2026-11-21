@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,16 +9,21 @@
     <link rel="stylesheet" href="/css/pages/entrega.css">
     <link rel="shortcut icon" href="../Images/simbolo_transparente.png">
 
+
 </head>
 
+
 <body>
-    <header class="cabecalho">
-        <img class="logo-prin" src="/Images/completa_transparente.png" alt="LOGO-PRINCIPAL">
+    <a href="home.html">
+        <header class="cabecalho">
+            <img class="logo-prin" src="/Images/completa_transparente.png" alt="LOGO-PRINCIPAL">
+        </a>
+
 
         <nav>
             <div class="ben">
                 <i>🔒</i>
-                <div>Compra seguro</div>
+                <div>Compra segura</div>
         </nav>
     </header>
     <div class="etapas">
@@ -27,6 +33,15 @@
         <hr>
         <span class="falta"> <i> 3 </i><em>Pagamento</em></span>
     </div>
+    <div class="etapas-m">
+        <span class="ok"> <i> ✓ </i><em></em></span>
+        <hr style="  border-top: 2px solid #d4af37;">
+        <span class="confirm"> <i> 2 </i><em>Entrega</em></span>
+        <hr>
+        <span class="falta"> <i> 3 </i><em></em></span>
+    </div>
+
+
 
 
     <div class="global">
@@ -71,20 +86,21 @@
                 </div>
                 <br>    
 
+
                 <div class="lugar">
                     <div class="cidade">
                         <label for="cidade">Cidade</label>
-                        <input type="text" id="cidade" name="cidade" required>
+                        <input type="text" id="cidade" name="cidade" placeholder="São Paulo" required>
                     </div>
                     <div class="estado">
                         <label for="uf">Estado</label>
                         <select id="uf"></select>
                     </div>
-                        
+                       
                     </div>
                 </div>
         <h3>Opção de entrega</h3>
-                
+               
                  <div class="opcoes" id="opcoes">
           <label class="opcao on">
             <input type="radio" name="frete" value="padrao" checked>
@@ -98,12 +114,16 @@
           </label>
         </div>
 
+
         <div class="botoes">
           <a class="voltar" href="carrinho.html">← Voltar ao carrinho</a>
           <button class="continuar" type="submit">Continuar para o pagamento</button>
+          <a class="voltar-m" href="carrinho.html">← Voltar ao carrinho</a>
+
+
         </div>
       </form>
-                
+               
             </div>
             <div class="resumo">
                 <h3 class="res-til">Resumo do pedido</h3>
@@ -113,8 +133,12 @@
                 <div class="tot"><span>Total</span><b id="tt"></b></div>
                 <p class="prazo">🚚 Chega em <b id="prazo"></b></p>
             </div>
-            
+           
     </div>
+       </div>
+
+
+<div><br></div>
 
 
 

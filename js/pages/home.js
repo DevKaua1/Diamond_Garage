@@ -1,7 +1,3 @@
-document.getElementById('voltar-topo').addEventListener('click', function (e) {
-  e.preventDefault();                                  
-  window.scrollTo({ top: 0, behavior: 'smooth' });     
-});
 const campoBusca = document.getElementById('campo-busca');
 const botaoBusca = document.getElementById('botao-busca');
 const ordenar = document.getElementById('ordenar');
@@ -12,6 +8,64 @@ const contador = document.getElementById('contador-carrinho');
 const botoesFiltro = document.querySelectorAll('.filtro');
 const produtos = Array.from(document.querySelectorAll('.produto'));
 const ordemOriginal = produtos.slice();
+
+var nav    = document.getElementById('menu-mobile');
+var toggle = document.getElementById('menu-toggle');
+
+var ICONE_ABRIR  = '../Images/menu-hamburger.svg';
+var ICONE_FECHAR = '../Images/menu-fechar.svg';
+
+function abrir(aberto) {
+  nav.classList.toggle('aberto', aberto);
+  toggle.src = aberto ? ICONE_FECHAR : ICONE_ABRIR;       // troca ☰ por ✕
+  toggle.alt = aberto ? 'Fechar menu' : 'Abrir menu';
+  toggle.setAttribute('aria-expanded', aberto);
+}
+
+toggle.addEventListener('click', function (e) {
+  e.stopPropagation();
+  abrir(!nav.classList.contains('aberto'));
+});
+
+toggle.addEventListener('keydown', function (e) {         // teclado
+  if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle.click(); }
+});
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') abrir(false);
+});
+
+document.addEventListener('click', function (e) {         // clicar fora fecha
+  if (!nav.contains(e.target)) abrir(false);
+});
+
+window.addEventListener('resize', function () {           // tela grande: fecha
+  if (window.innerWidth > 1023) abrir(false);
+});
+
+// marca a página atual em dourado
+var arquivo = location.pathname.split('/').pop() || 'home.html';
+document.querySelectorAll('.menu-links a').forEach(function (a) {
+  if (a.getAttribute('href') === arquivo) a.classList.add('atual');
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 let categoriaAtual = 'Todos';
 
@@ -132,6 +186,7 @@ for (let i = 0; i < botoesFiltro.length; i++) {
 
 for (let i = 0; i < produtos.length; i++) {
   const botao = produtos[i].querySelector('.comprar');
+  const link = produtos[i].querySelector('a').getAttribute('href');
 
   botao.addEventListener('click', function () {
     adicionarAoCarrinho(produtos[i], botao);
@@ -149,3 +204,4 @@ campoBusca.addEventListener('keyup', mostrarProdutos);
 botaoBusca.addEventListener('click', mostrarProdutos);
 
 atualizarContador();
+

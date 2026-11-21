@@ -593,7 +593,7 @@ footer{
 }
 
 .menu-mobile img{
-  height: 25px;
+  height: 55px;
   display: block;
 }
 .menu-mobile{
@@ -615,6 +615,79 @@ footer{
 .carrinho{
   left: 143px;
 }
+
+
+@media (max-width: 1023px) {
+  .menu { display: none; }                 
+  .menu-mobile { display: block; }         
+
+  .menu-toggle { display: block; width: 42px; height: 42px; cursor: pointer; }
+
+  .menu-links {                            
+    position: absolute;
+    top: calc(100% + 14px);
+    right: 0;
+    width: min(280px, calc(100vw - 28px));
+    background: #26211a;
+    border: 1px solid #3a3328;
+    border-top: 2px solid #d4af37;
+    border-radius: 14px;
+    box-shadow: 0 20px 30px rgba(0, 0, 0, .5);
+    padding: 6px 8px;
+    z-index: 50;
+    opacity: 0;                            
+    visibility: hidden;
+    transform: translateY(-8px);
+    transition: opacity .2s, transform .2s, visibility .2s;
+  }
+
+  .menu-mobile.aberto .menu-links { 
+    opacity: 1;
+    visibility: 
+    visible;
+     transform: none;
+     }
+
+  .menu-links a {
+    display: block;
+    padding: 14px 12px;
+    color: #f3ead9;
+    text-decoration: none;
+    font-size: 17px;
+    border-bottom: 1px solid #3a3328;
+  }
+  .menu-links a:last-child { 
+    border-bottom: 0; 
+  }
+  .menu-links a:hover,
+  .menu-links a.atual { 
+    color: #e0be4f; 
+    font-weight: 700; 
+  }
+  .menu-links .conta {
+    display: flex;
+    gap: 10px;
+    padding: 14px 4px 8px;
+  }
+  .menu-links .conta a {
+    padding: 13px 8px;
+    border: 1px solid #d4af37;
+    border-radius: 12px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 700;
+    color: #d4af37;            
+  }
+  .menu-links .conta a:last-child {  
+    background: #d4af37;
+    color: #000;
+  }
+  
+    .entrar{
+      width: 100px;
+    }
+}
+
 .container{
   display: flex;
   flex-direction: column; 
@@ -698,8 +771,8 @@ width: 167%;
 }
 
 .f-in {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  flex-direction: column;
   padding: 15px;
   gap: 18px;
 }
