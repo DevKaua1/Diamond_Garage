@@ -196,17 +196,17 @@ function erro(input, msg) {
     input.insertAdjacentElement('afterend', aviso);
   }
   aviso.textContent = msg;
-  ajustarAltura();                 // a caixa cresce quando aparece um erro
+  ajustarAltura();                 
 }
 
 function limpar(input) {
   input.classList.remove('erro');
   var aviso = document.getElementById('erro-' + input.id);
   if (aviso) aviso.remove();
-  ajustarAltura();                 // a caixa encolhe quando o erro some
+  ajustarAltura();                
 }
 
-// tira o erro assim que a pessoa começa a corrigir o campo
+
 document.querySelectorAll('#n, #m, #v, #c, #cpf').forEach(function (campo) {
   campo.addEventListener('input', function () { limpar(campo); });
 });
@@ -253,7 +253,7 @@ function validarCartao() {
 
 function cpfValido(cpf) {
   cpf = cpf.replace(/\D/g, '');
-  if (cpf.length !== 11 || /^(\d)\1+$/.test(cpf)) return false;   // 111.111.111-11 não vale
+  if (cpf.length !== 11 || /^(\d)\1+$/.test(cpf)) return false;  
   for (var t = 9; t < 11; t++) {
     var soma = 0;
     for (var i = 0; i < t; i++) soma += cpf[i] * (t + 1 - i);

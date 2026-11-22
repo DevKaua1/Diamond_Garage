@@ -11,7 +11,7 @@ var itens = JSON.parse(localStorage.getItem('carrinho') || '[]').map(function (i
 });
 
 if (itens.length === 0) {
-  window.location.href = 'produto.html';   // carrinho vazio: volta aos produtos
+  window.location.href = 'produto.html';   
 }
 
 function moeda(v) {
@@ -21,7 +21,6 @@ function moeda(v) {
 var $ = function (id) { return document.getElementById(id); };
 var SUBTOTAL = itens.reduce(function (s, i) { return s + i.preco * i.qtd; }, 0);
 
-// opções de entrega (troque os valores e prazos pelos da sua loja)
 var FRETES = {
   padrao:   { valor: 0,     prazo: '5 a 8 dias úteis' },
   expresso: { valor: 29.90, prazo: '2 a 3 dias úteis' }
@@ -77,21 +76,21 @@ $('uf').innerHTML = '<option value="">Selecione o estado</option>' +
 //    cresce quando aparecem erros e volta ao normal quando somem
 // =====================================================
 var caixa = document.querySelector('.cont');
-var ALTURA_BASE = caixa.offsetHeight;          // altura que o card tem no CSS, sem erros
+var ALTURA_BASE = caixa.offsetHeight;          
 
 function ajustarAltura() {
-  caixa.style.height = 'auto';                 // deixa o card crescer conforme o conteúdo
-  caixa.style.minHeight = ALTURA_BASE + 'px';  // mas nunca menor que o tamanho original
+  caixa.style.height = 'auto';                
+  caixa.style.minHeight = ALTURA_BASE + 'px';  
 }
 
 
 // =====================================================
 // 4. CAMPOS: tipo texto + máscaras
 // =====================================================
-// campos type="number" não aceitam ponto, traço e parênteses: troca por texto
+
 ['cpf', 'telefone', 'cep', 'numero'].forEach(function (id) {
   $(id).type = 'text';
-  $(id).setAttribute('inputmode', 'numeric');   // teclado de números no celular
+  $(id).setAttribute('inputmode', 'numeric');   
 });
 $('cpf').maxLength = 14;
 $('telefone').maxLength = 15;
@@ -99,7 +98,7 @@ $('cep').maxLength = 9;
 $('numero').maxLength = 6;
 
 $('name').oninput = function () {
-  this.value = this.value.replace(/[^\p{L}\s]/gu, '');           // só letras e espaços
+  this.value = this.value.replace(/[^\p{L}\s]/gu, '');           
 };
 
 $('cpf').oninput = function () {
@@ -154,7 +153,7 @@ $('cep').oninput = function () {
       $('uf').value     = d.uf || '';
       ['rua', 'bairro', 'cidade', 'uf'].forEach(function (id) { limpar($(id)); });
       aviso('');
-      $('numero').focus();                                         // falta só o número
+      $('numero').focus();                                        
     })
     .catch(function () { aviso('Não foi possível buscar o CEP. Preencha manualmente.'); });
 };
@@ -173,14 +172,14 @@ function erro(input, msg) {
     input.insertAdjacentElement('afterend', a);
   }
   a.textContent = msg;
-  ajustarAltura();                              // o card cresce
+  ajustarAltura();                              
 }
 
 function limpar(input) {
   input.classList.remove('erro');
   var a = $('erro-' + input.id);
   if (a) a.remove();
-  ajustarAltura();                              // o card encolhe
+  ajustarAltura();                             
 }
 
 function cpfValido(cpf) {
@@ -194,7 +193,6 @@ function cpfValido(cpf) {
   return true;
 }
 
-// regra de cada campo: "ok" diz se o valor está certo, "msg" é o aviso em vermelho
 var REGRAS = {
   name:     { ok: function (v) { return v.trim().length >= 5 && v.trim().split(/\s+/).length >= 2; }, msg: 'Digite nome e sobrenome' },
   cpf:      { ok: cpfValido,                                                                          msg: 'CPF inválido' },
@@ -207,35 +205,33 @@ var REGRAS = {
   uf:       { ok: function (v) { return v !== ''; },                                                  msg: 'Escolha o estado' }
 };
 
-// confere um campo. "exigir" = true também reprova campo vazio (usado no botão Continuar)
 function checarCampo(id, exigir) {
   var campo = $(id);
   var valor = campo.value;
 
-  if (!valor.trim() && !exigir) { limpar(campo); return true; }   // vazio: fica neutro
+  if (!valor.trim() && !exigir) { limpar(campo); return true; }   
 
   if (REGRAS[id].ok(valor)) { limpar(campo); return true; }
 
-  erro(campo, REGRAS[id].msg);                                    // errado: vermelho
+  erro(campo, REGRAS[id].msg);                                 
   return false;
 }
 
-// confere enquanto a pessoa digita
+
 Object.keys(REGRAS).forEach(function (id) {
   var campo = $(id);
 
   campo.addEventListener('input', function () {
     var digitos = campo.value.replace(/\D/g, '').length;
 
-    // CPF, CEP e telefone completos: já avisa se estiver errado, sem esperar sair do campo
+
     if ((id === 'cpf' && digitos === 11) ||
         (id === 'cep' && digitos === 8) ||
         (id === 'telefone' && digitos === 11)) {
       campo.dataset.tocado = '1';
     }
 
-    // depois de "tocado" (ou se já está vermelho), confere a cada tecla:
-    // fica vermelho se errar e volta ao normal assim que acertar
+
     if (campo.dataset.tocado === '1' || campo.classList.contains('erro')) {
       checarCampo(id);
     }
@@ -247,10 +243,10 @@ Object.keys(REGRAS).forEach(function (id) {
     checarCampo(id);
   });
 
-  campo.addEventListener('change', function () { checarCampo(id); });   // para o select de Estado
+  campo.addEventListener('change', function () { checarCampo(id); });   
 });
 
-// usado pelo botão "Continuar": confere todos, inclusive os vazios
+
 function validar() {
   var ok = true;
   Object.keys(REGRAS).forEach(function (id) {
@@ -270,7 +266,7 @@ document.querySelector('.continuar').onclick = function (e) {
     var primeiro = document.querySelector('.erro');
     primeiro.scrollIntoView({ behavior: 'smooth', block: 'center' });
     primeiro.focus();
-    return;                                                        // para aqui: não segue
+    return;                                                        
   }
 
   var opcao = opcaoEscolhida();
