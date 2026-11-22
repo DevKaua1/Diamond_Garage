@@ -97,7 +97,9 @@
   display: block;
 }
 
-.carrinho { position: relative; }
+.carrinho {
+  position: relative;
+}
 
 #contador-carrinho {
   position: absolute;
@@ -110,7 +112,6 @@
   padding: 1px 6px;
   border-radius: 10px;
 }
-
     body {
       background: var(--bg);
       color: var(--text);
