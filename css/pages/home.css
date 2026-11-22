@@ -345,6 +345,7 @@ margin-left: 100px;
   grid-template-columns: repeat(3, 320px);
   justify-content: center;
   gap: 30px;
+  
 }
 
 .lista a {
@@ -696,7 +697,7 @@ footer{
 .container{
   display: flex;
   flex-direction: column; 
-  height: 700px;
+  height: 650px;
 }
 .image img {
     display: none;
@@ -752,7 +753,7 @@ right: 45px;
 }
 
 b{
-  margin-left: 218%;
+  margin-left: 224%;
   margin-right: 0;
 }
 .circ .mobile span{
@@ -765,7 +766,11 @@ b{
 }
 
 .lista{
-  grid-template-columns: repeat(2, 174px);
+grid-template-columns: repeat(2, 1fr);
+}
+
+.rodas{
+margin-left: 250%;
 }
 .rev {
   margin-left: 10%;
