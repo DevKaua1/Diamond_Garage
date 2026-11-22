@@ -4,7 +4,7 @@ Content-Type: application/json
 
 {
   "nome": "Matheus Silva",
-  "email": "teste@exemplo.com",
+  "email": "testenovo@exemplo.com",
   "senha": "abc12345"
 }
 
@@ -36,4 +36,31 @@ Content-Type: application/json
   "nome": "",
   "email": "",
   "senha": ""
+}
+
+### 5. Código errado (esperado: 400, restam 4)
+POST http://localhost:8080/api/verificar-codigo
+Content-Type: application/json
+
+{
+  "email": "testenovo@exemplo.com",
+  "codigo": "11111"
+}
+
+### 6. Código certo (esperado: 200)
+POST http://localhost:8080/api/verificar-codigo
+Content-Type: application/json
+
+{
+  "email": "testenovo@exemplo.com",
+  "codigo": "00642"
+}
+
+### 7. De novo (esperado: 409)
+POST http://localhost:8080/api/verificar-codigo
+Content-Type: application/json
+
+{
+  "email": "testenovo@exemplo.com",
+  "codigo": "00642"
 }
