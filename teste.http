@@ -1,0 +1,39 @@
+### 1. Cadastro correto (esperado: 201)
+POST http://localhost:8080/api/cadastro
+Content-Type: application/json
+
+{
+  "nome": "Matheus Silva",
+  "email": "teste@exemplo.com",
+  "senha": "abc12345"
+}
+
+### 2. Mesmo e-mail de novo (esperado: 409)
+POST http://localhost:8080/api/cadastro
+Content-Type: application/json
+
+{
+  "nome": "Matheus Silva",
+  "email": "teste@exemplo.com",
+  "senha": "abc12345"
+}
+
+### 3. Dados inválidos (esperado: 400)
+POST http://localhost:8080/api/cadastro
+Content-Type: application/json
+
+{
+  "nome": "Ma",
+  "email": "abc",
+  "senha": "123"
+}
+
+### 4. Tudo vazio (esperado: 400)
+POST http://localhost:8080/api/cadastro
+Content-Type: application/json
+
+{
+  "nome": "",
+  "email": "",
+  "senha": ""
+}

@@ -42,5 +42,31 @@ public class Usuario {
         this.senhaHash = senhaHash;
     }
 
-    // Gere os getters e setters (veja abaixo)
+        public Long getId() {
+        return id;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getSenhaHash() {
+        return senhaHash;
+    }
+
+    public boolean isEmailVerificado() {
+        return emailVerificado;
+    }
+
+    public void setEmailVerificado(boolean emailVerificado) {
+        this.emailVerificado = emailVerificado;
+    }
+
+    public Instant getCriadoEm() {
+        return criadoEm;
+    }
 }
