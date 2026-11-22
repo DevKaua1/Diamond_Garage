@@ -33,4 +33,9 @@ public class TratadorDeErros {
     public ResponseEntity<Map<String, String>> emailDuplicado(EmailJaCadastradoException ex) {
         return ResponseEntity.status(HttpStatus.CONFLICT).body(Map.of("email", ex.getMessage()));
     }
+
+    @ExceptionHandler(RegraDeNegocioException.class)
+    public ResponseEntity<Map<String, String>> regraDeNegocio(RegraDeNegocioException ex) {
+        return ResponseEntity.status(ex.getStatus()).body(Map.of(ex.getCampo(), ex.getMessage()));
+    }
 }
