@@ -5,7 +5,7 @@ const produtos = [
     categoria: 'Escapamentos',
     preco: 567.99,
     imagem: '../Images/produto-escapamento-sem-fundo.png',
-    descricao: 'Escapamento esportivo para dar mais estilo e um som mais marcante à sua moto. Confira a compatibilidade com o seu modelo antes de comprar.'
+    descricao: 'Escapamento esportivo pensado para quem quer dar mais personalidade à moto, tanto no visual quanto no som. O desenho esportivo muda a aparência da lateral e deixa o conjunto com cara de moto preparada, e o som fica mais marcante do que o do escapamento original. É indicado para as motos Titan e Fan 160, mas confira a compatibilidade com o seu modelo e ano antes de comprar. Em caso de dúvida sobre a instalação, fale com a gente no WhatsApp.'
   },
   {
     id: 2,
@@ -13,7 +13,7 @@ const produtos = [
     categoria: 'Aerofólios',
     preco: 999.99,
     imagem: '../Images/produto-aerofolio-sem-fundo.png',
-    descricao: 'Aerofólio traseiro universal estilo GT, para deixar o visual do carro mais esportivo.'
+    descricao: 'Aerofólio traseiro universal no estilo GT, inspirado nos carros de pista, que deixa a traseira do carro mais imponente e esportiva. Por ser universal, ele pode ser usado em vários modelos, mas o encaixe e a posição de fixação dependem do formato da tampa do porta-malas. Por isso, confira as medidas do seu carro antes de comprar. Para um resultado bonito e seguro, recomendamos fazer a instalação em uma oficina de confiança.'
   },
   {
     id: 3,
@@ -21,7 +21,7 @@ const produtos = [
     categoria: 'Volantes',
     preco: 896.43,
     imagem: '../Images/produto-volante-sem-fundo.png',
-    descricao: 'Volante esportivo na cor grafite, com acabamento que muda o visual do interior do carro.'
+    descricao: 'Volante esportivo na cor grafite, que renova o interior do carro e deixa a direção com um toque mais esportivo. O acabamento diferenciado muda o visual do painel e faz diferença toda vez que você senta para dirigir. Ele foi pensado para o Renault Clio, então confira o ano e a versão do seu carro antes de comprar. Na instalação, tenha cuidado com o airbag e com os comandos do volante original, e faça o serviço com um profissional.'
   },
   {
     id: 4,
@@ -29,7 +29,7 @@ const produtos = [
     categoria: 'Emblemas',
     preco: 323.87,
     imagem: '../Images/produto-emblema-sem-fundo.png',
-    descricao: 'Estrela emblema para o capô, para dar um toque de sofisticação ao visual frontal do carro.'
+    descricao: 'Estrela emblema para o capô, que dá um toque de sofisticação ao visual frontal do carro e valoriza o acabamento de quem cuida de cada detalhe. É uma forma simples de mudar a identidade da dianteira sem precisar trocar peças grandes. Antes de comprar, confira o tamanho e o tipo de fixação para o seu veículo. Se tiver qualquer dúvida sobre o encaixe, é só chamar a gente no WhatsApp.'
   },
   {
     id: 5,
@@ -37,7 +37,7 @@ const produtos = [
     categoria: 'Retrovisores',
     preco: 37.96,
     imagem: '../Images/produto-retrovisor-sem-fundo.png',
-    descricao: 'Par de retrovisores esportivos com rosca para moto Honda. Confira a medida da rosca antes de comprar.'
+    descricao: 'Par de retrovisores com visual esportivo inspirado na Kawasaki Z400, para quem quer trocar o espelho original por algo mais estiloso. Além de melhorar a aparência da moto, ele mantém a função principal de dar boa visão traseira ao piloto. A rosca é do padrão Honda, então confira a medida da rosca da sua moto antes de comprar. Se precisar de ajuda para ter certeza do encaixe, fale com a gente no WhatsApp.'
   },
   {
     id: 6,
@@ -45,7 +45,7 @@ const produtos = [
     categoria: 'Aerofólios',
     preco: 448.91,
     imagem: '../Images/Lip%20splitter%20dianteiro.png',
-    descricao: 'Spoiler dianteiro universal e ajustável, para deixar a frente do carro com um visual mais esportivo.'
+    descricao: 'Spoiler dianteiro universal e ajustável, que deixa a frente do carro com um visual mais baixo, esportivo e agressivo. Por ser ajustável, ele se adapta a diferentes modelos, o que ajuda a conseguir um encaixe melhor no para-choque. É uma ótima opção para quem quer um kit mais completo, combinando com um aerofólio traseiro. Como a peça fica na parte baixa do carro, tome cuidado com lombadas e rampas, e faça a instalação com atenção.'
   },
   {
     id: 7,
@@ -53,7 +53,7 @@ const produtos = [
     categoria: 'Escapamentos',
     preco: 55.79,
     imagem: '../Images/New_Ponteiras_HD_sem_fundo.png',
-    descricao: 'Ponteiras de escapamento em vários modelos e cores, para dar acabamento esportivo na saída do escape.'
+    descricao: 'Ponteiras de escapamento disponíveis em vários modelos e cores, para dar um acabamento esportivo à saída do escape e deixar a traseira do carro com mais presença. É uma forma simples e barata de renovar o visual sem trocar o escapamento inteiro. Antes de comprar, confira o diâmetro do seu escapamento para garantir o encaixe. Se ficar na dúvida sobre qual modelo escolher, fale com a gente no WhatsApp.'
   },
   {
     id: 8,
@@ -61,7 +61,7 @@ const produtos = [
     categoria: 'Grades',
     preco: 949.00,
     imagem: '../Images/Civic_HD_sem_fundo%20(1).png',
-    descricao: 'Grade frontal esportiva para Honda Civic G10, para renovar o visual da frente do carro.'
+    descricao: 'Grade frontal esportiva feita para o Honda Civic G10, que renova o visual da dianteira e dá ao carro um ar mais esportivo e moderno. Como a grade é a primeira coisa que as pessoas veem, é uma das trocas que mais mudam a aparência do carro. Ela serve para a geração G10 do Civic, então confira o ano e a versão do seu carro antes de comprar. Para um bom acabamento, recomendamos a instalação em uma oficina de confiança.'
   },
   {
     id: 9,
@@ -69,7 +69,7 @@ const produtos = [
     categoria: 'Rodas',
     preco: 1299.90,
     imagem: '../Images/produto-roda.png',
-    descricao: 'Jogo de rodas esportivas aro 17, furação 4x100, acabamento preto com detalhes diamantados. Confira a furação do seu carro antes de comprar.'
+    descricao: 'Jogo de rodas esportivas aro 17, furação 4x100, modelo Eclipse K63 da Kr Krmai, para quem quer renovar por completo o visual do carro. Rodas novas mudam a aparência do conjunto e combinam com quem busca um estilo mais esportivo. Antes de comprar, confira se o seu carro usa furação 4x100 e se o aro 17 é compatível com o seu modelo, incluindo a medida dos pneus. Se precisar de ajuda para conferir, fale com a gente no WhatsApp.'
   }
 ];
 
