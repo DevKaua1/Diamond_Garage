@@ -765,8 +765,19 @@ b{
   display: none;
 }
 
-.lista{
-grid-template-columns: repeat(2, 1fr);
+  .lista {
+     display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  }
+
+
+.produto h3 {
+  line-height: 1.3;
+  min-height: calc(1.3em * 3);    
+  display: -webkit-box;
+  -webkit-line-clamp: 3;         
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .rodas{
