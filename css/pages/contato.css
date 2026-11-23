@@ -73,7 +73,9 @@
 .busca button:active {
   transform: translateY(-50%);
 }
-
+ .menu{   
+  margin-right: 20% ;
+}
 .busca button img {
   width: 16px;
   height: 16px;

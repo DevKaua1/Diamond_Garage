@@ -95,7 +95,9 @@ body {
   text-transform: uppercase;
   margin-bottom: 14px;
 }
- 
+ .menu{   
+  margin-right: 20% ;
+}
 .banner h1 {
   font-size: clamp(1.8rem, 3vw, 2.4rem);
   color: #ffffff;
