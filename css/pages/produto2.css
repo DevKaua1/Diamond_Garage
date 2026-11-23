@@ -281,18 +281,53 @@ a {
 }
 
 @media (max-width: 900px) {
+  .cabecalho {
+    flex-wrap: wrap;
+    padding: 3px 14px 8px;
+  }
+
+  .logo {
+    height: 60px;
+  }
+
+  .menu {
+    order: 3;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .menu a {
+    margin: 0 10px;
+  }
+
   .detalhe {
     grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .foto {
+    max-width: 500px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .colunas {
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0 20px;
   }
 }
 
 @media (max-width: 700px) {
-  .cabecalho {
-    padding: 3px 14px;
+  .principal {
+    padding: 20px 14px 0;
   }
 
-  .menu {
-    display: none;
+  .caminho {
+    font-size: 13px;
+    margin-bottom: 16px;
   }
 
   .dados h1 {
@@ -307,9 +342,35 @@ a {
     flex-direction: column;
   }
 
+  .rodape {
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 500px) {
+  .logo {
+    height: 50px;
+  }
+
+  .menu a {
+    margin: 0 6px;
+    font-size: 14px;
+  }
+
+  .dados h1 {
+    font-size: 21px;
+  }
+
+  .preco {
+    font-size: 28px;
+  }
+
+  .descricao {
+    font-size: 14px;
+  }
+
   .colunas {
-    flex-wrap: wrap;
-    gap: 20px;
-    padding: 0 20px;
+    flex-direction: column;
+    padding: 15px;
   }
 }
