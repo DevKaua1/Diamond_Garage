@@ -10,7 +10,7 @@ const produtos = [
   {
     id: 2,
     nome: 'Aerofólio Traseiro Universal estilo GT',
-    categoria: 'Exterior',
+    categoria: 'Aerofólios',
     preco: 999.99,
     imagem: '../Images/produto-aerofolio-sem-fundo.png',
     descricao: 'Aerofólio traseiro universal estilo GT, para deixar o visual do carro mais esportivo.'
@@ -18,7 +18,7 @@ const produtos = [
   {
     id: 3,
     nome: 'Volante Esportivo Gti Grafite Renault Clio',
-    categoria: 'Interior',
+    categoria: 'Volantes',
     preco: 896.43,
     imagem: '../Images/produto-volante-sem-fundo.png',
     descricao: 'Volante esportivo na cor grafite, com acabamento que muda o visual do interior do carro.'
@@ -26,7 +26,7 @@ const produtos = [
   {
     id: 4,
     nome: 'Estrela Emblema Do Capô Mercedes',
-    categoria: 'Exterior',
+    categoria: 'Emblemas',
     preco: 323.87,
     imagem: '../Images/produto-emblema-sem-fundo.png',
     descricao: 'Estrela emblema para o capô, para dar um toque de sofisticação ao visual frontal do carro.'
@@ -34,7 +34,7 @@ const produtos = [
   {
     id: 5,
     nome: 'Retrovisor Kawasaki Z400 Rosca Honda',
-    categoria: 'Exterior',
+    categoria: 'Retrovisores',
     preco: 37.96,
     imagem: '../Images/produto-retrovisor-sem-fundo.png',
     descricao: 'Par de retrovisores esportivos com rosca para moto Honda. Confira a medida da rosca antes de comprar.'
@@ -42,7 +42,7 @@ const produtos = [
   {
     id: 6,
     nome: 'Spoiler Dianteiro Universal Ajustável',
-    categoria: 'Exterior',
+    categoria: 'Aerofólios',
     preco: 448.91,
     imagem: '../Images/Lip%20splitter%20dianteiro.png',
     descricao: 'Spoiler dianteiro universal e ajustável, para deixar a frente do carro com um visual mais esportivo.'
@@ -58,10 +58,18 @@ const produtos = [
   {
     id: 8,
     nome: 'Grade Frontal Esportiva Civic G10',
-    categoria: 'Exterior',
+    categoria: 'Grades',
     preco: 949.00,
     imagem: '../Images/Civic_HD_sem_fundo%20(1).png',
     descricao: 'Grade frontal esportiva para Honda Civic G10, para renovar o visual da frente do carro.'
+  },
+  {
+    id: 9,
+    nome: 'Rodas Aro 17 Eclipse 4x100 Kr Krmai K63 Esportivas',
+    categoria: 'Rodas',
+    preco: 1299.90,
+    imagem: '../Images/produto-roda.png',
+    descricao: 'Jogo de rodas esportivas aro 17, furação 4x100, acabamento preto com detalhes diamantados. Confira a furação do seu carro antes de comprar.'
   }
 ];
 
