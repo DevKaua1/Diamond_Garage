@@ -8,29 +8,42 @@
   <link rel="stylesheet" href="../css/pages/sobre-nos.css">
 </head>
 <body>
-    <header class="cabecalho">
-    <a href="home.html"><img class="logo" src="../Images/completa_transparente.png" alt="Diamond Garage"></a>
 
+  <header class="cabecalho">
+  <a href="home.html"><img class="logo" src="../Images/completa_transparente.png" alt="Diamond Garage"></a>
+  <a href="home.html"><img class="logo-mobile" src="../Images/simbolo_transparente.png" alt="Diamond Garage"></a>
 
-    
+  <nav class="menu">
+    <a href="home.html">Home</a>
+    <a href="produto.html">Produtos</a>
+    <a href="sobre-nos.html" class="atual">Sobre Nós</a>
+    <a href="contato.html">Contato</a>
+  </nav>
 
-
-    <nav class="menu">
+  <nav class="menu-mobile" id="menu-mobile">
+    <img src="../Images/menu-hamburger.svg" alt="Abrir menu" class="menu-toggle" id="menu-toggle"
+         role="button" tabindex="0" aria-expanded="false" aria-controls="menu-links">
+    <div class="menu-links" id="menu-links">
       <a href="home.html">Home</a>
-      <a href="produto.html" >Produtos</a>
-      <a href="sobre-nos.html"class="atual">Sobre Nós</a>
+      <a href="produto.html">Produtos</a>
+      <a href="sobre-nos.html">Sobre Nós</a>
       <a href="contato.html">Contato</a>
-    </nav>
-
-
-    <div class="icones">
-      <a href="login.html"><img src="../Images/user-icon-hd.png" alt="Minha conta"></a>
-      <a href="carrinho.html" class="carrinho">
-        <img src="../Images/cart-icon.svg" alt="Carrinho">
-        <span id="contador-carrinho">0</span>
-      </a>
+      <div class="conta">
+        <a style="padding-top: 20px;" href="login.html" class="entrar">Entrar</a>
+        <a href="cadastro.html">Criar conta</a>
+      </div>
     </div>
-  </header>
+  </nav>
+
+  <div class="icones">
+    <a class="user" href="login.html"><img src="../Images/user-icon-hd.png" alt="Minha conta"></a>
+    <a href="carrinho.html" class="carrinho">
+      <img src="../Images/cart-icon.svg" alt="Carrinho">
+      <span id="contador-carrinho">0</span>
+    </a>
+  </div>
+</header>
+
   <main>
     <!-- Banner -->
     <section class="banner">
@@ -59,15 +72,15 @@
     <section class="numeros">
       <div class="numeros-lista">
         <div class="numero-item">
-          <strong>500+</strong>
+          <strong>100+</strong>
           <span>clientes satisfeitos</span>
         </div>
         <div class="numero-item">
-          <strong>200+</strong>
+          <strong>20+</strong>
           <span>produtos no catálogo</span>
         </div>
         <div class="numero-item">
-          <strong>5</strong>
+          <strong>3</strong>
           <span>anos de mercado</span>
         </div>
         <div class="numero-item">
@@ -261,8 +274,10 @@
       <p>&copy; 2026 Diamond Garage. Todos os direitos reservados.</p>
     </div>
   </footer>
-<script src="../js/pages/contador.js"></script>
 
-</body>
+ <script src="../js/pages/menu.js"></script>
+ <script src="../js/pages/contador.js"></script>
+
+ </body>
 </html>
 

@@ -22,53 +22,23 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 5px 48px;
-  box-shadow: 0 2.8px 2px #d4af37;
-
+  padding: 3px 40px;
 }
-
+.menu-mobile{
+  display: none;
+}
+.logo-mobile{
+  display: none;
+}
 .logo {
   height: 80px;
   display: block;
-}
-
-.busca {
-  position: relative;
-  flex: 1;
-  max-width: 650px;
-  margin: 0 24px;
-}
-
-.busca input {
-  width: 100%;
-  padding: 12px 60px 12px 15px;
-  border: none;
-  border-radius: 18px;
-  font-size: 14px;
-}
-
-.busca button {
-  position: absolute;
-  right: 8px;
-  top: 7px;
-  width: 38px;
-  height: 26px;
-  border: none;
-  border-radius: 15px;
-  background-color: #d4af37;
-  cursor: pointer;
-}
-
-.busca button img {
-  width: 16px;
-  height: 16px;
 }
 
 .menu a {
   color: white;
   margin: 0 15px;
   text-decoration: none;
-  white-space: nowrap;
 }
 
 .menu a:hover {
@@ -107,6 +77,7 @@ body {
   padding: 1px 6px;
   border-radius: 10px;
 }
+
 /* ===== Banner ===== */
 .banner {
   background: radial-gradient(ellipse at 85% 40%,rgba(195, 164, 95, 0.45) 0%, transparent 65%), 
@@ -573,44 +544,13 @@ body {
     gap: 32px 24px;
   }
 }
- 
+
 @media (max-width: 560px) {
   .banner .texto { font-size: 1.05rem; }
   .historia-texto h2 { font-size: 1.9rem; }
   .rodape-conteudo { grid-template-columns: 1fr; }
 }
-@media (max-width: 1000px) {
-  .cabecalho {
-    flex-wrap: wrap;
-    padding: 8px 20px;
-    row-gap: 8px;
-  }
 
-  .cabecalho > a:first-child { order: 1; }  /* logo */
-  .icones { order: 2; }
-  .busca {
-    order: 3;
-    flex: 1 1 100%;
-    max-width: none;
-    margin: 0;
-  }
-  .menu {
-    order: 4;
-    flex: 1 1 100%;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    row-gap: 4px;
-  }
-
-  .logo { height: 56px; }
-  .icones img { width: 36px; height: 36px; }
-}
-
-@media (max-width: 560px) {
-  .busca input { font-size: 16px; } 
-  .menu a { margin: 0 8px; font-size: 0.95rem; }
-}
 @media (max-width: 800px) {
   .valores-grid { grid-template-columns: 1fr; }
   .numeros-lista {
@@ -618,6 +558,7 @@ body {
     gap: 28px 0;
   }
 }
+
 @media (max-width: 560px) {
   .banner { padding: 48px 20px; }
   .secao h2 { font-size: 1.5rem; }
@@ -626,3 +567,89 @@ body {
   .cta-botoes .btn { width: 100%; }
 }
 
+/* ===== Header mobile (idêntico à home) ===== */
+.cabecalho, .cabecalho * { font-family: 'Roboto', sans-serif; }
+
+@media (max-width: 480px) {
+  html, body { overflow-x: hidden; }
+
+  .cabecalho { padding: 0; justify-content: normal; }
+  .menu { display: none; }
+  .logo { display: none; }
+  .logo-mobile { height: 75px; display: block; }
+  .user { display: none; }
+  .carrinho { left: 243px; }
+
+  .menu-mobile {
+    position: absolute;
+    display: block;
+    left: 72%;
+  }
+  .menu-mobile img {
+    display: block;
+    width: 42px;
+    height: 55px;
+    cursor: pointer;
+  }
+  .menu-mobile a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    padding: 5px;
+  }
+
+  .menu-links {
+    position: absolute;
+    top: calc(100% + 14px);
+    right: 0;
+    width: min(280px, calc(100vw - 28px));
+    background: #26211a;
+    border: 1px solid #3a3328;
+    border-top: 2px solid #d4af37;
+    border-radius: 14px;
+    box-shadow: 0 20px 30px rgba(0, 0, 0, .5);
+    padding: 6px 8px;
+    z-index: 50;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+    transition: opacity .2s, transform .2s, visibility .2s;
+  }
+  .menu-mobile.aberto .menu-links {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+  }
+
+  .menu-links a {
+    display: block;
+    padding: 14px 12px;
+    color: #f3ead9;
+    text-decoration: none;
+    font-size: 17px;
+    border-bottom: 1px solid #3a3328;
+  }
+  .menu-links a:last-child { border-bottom: 0; }
+  .menu-links a:hover,
+  .menu-links a.atual { color: #e0be4f; font-weight: 700; }
+
+  .menu-links .conta {
+    display: flex;
+    gap: 10px;
+    padding: 14px 4px 8px;
+  }
+  .menu-links .conta a {
+    padding: 13px 8px;
+    border: 1px solid #d4af37;
+    border-radius: 12px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 700;
+    color: #d4af37;
+  }
+  .menu-links .conta a:last-child {
+    background: #d4af37;
+    color: #000;
+  }
+  .entrar { width: 100px; }
+}

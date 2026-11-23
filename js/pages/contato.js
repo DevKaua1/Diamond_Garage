@@ -1,11 +1,12 @@
+// ===== Formulário de contato: validação e comprovante =====
+// (o contador do carrinho fica no contador.js; não repita aqui)
 
-// 1) Pegando os elementos da página ------------------
+// 1) Pegando os elementos da página
 const formulario = document.querySelector("form");
 const campoNome = document.getElementById("nome");
 const campoEmail = document.getElementById("email");
 const campoAssunto = document.getElementById("assunto");
 const campoMensagem = document.getElementById("mensagem");
-
 
 const campos = [campoNome, campoEmail, campoAssunto, campoMensagem];
 
@@ -40,9 +41,8 @@ const regras = {
   },
 };
 
-
 function mostrarErro(campo, mensagem) {
-  const caixa = campo.parentElement; 
+  const caixa = campo.parentElement;
 
   // Procura o <span> de erro; se ainda não existir, cria um
   let erro = caixa.querySelector(".mensagem-erro");
@@ -74,7 +74,7 @@ function limparErro(campo) {
 
 // Valida UM campo. Devolve true se estiver correto, false se tiver erro.
 function validarCampo(campo) {
-  const valor = campo.value.trim(); // trim() tira espaços do começo e do fim
+  const valor = campo.value.trim();
   const mensagem = regras[campo.id](valor);
 
   if (mensagem !== "") {
@@ -187,7 +187,7 @@ formulario.addEventListener("submit", function (evento) {
     primeiroComErro.focus();
     return;
   }
-  
+
   const dados = {
     protocolo: gerarProtocolo(),
     dataHora: new Date().toLocaleString("pt-BR"),
@@ -202,17 +202,15 @@ formulario.addEventListener("submit", function (evento) {
   mostrarComprovante(dados);
 });
 
-
 campos.forEach(function (campo) {
 
-  // Nesse momento conferimos o que o usuário digitou.
+  // Ao sair do campo, conferimos o que o usuário digitou.
   campo.addEventListener("blur", function () {
     validarCampo(campo);
   });
 
-  // input = o usuário digitou ou apagou algo.
-  // Só revalidamos se o campo JÁ está com erro, assim a mensagem some
-  // (ou muda) assim que ele corrige.
+  // Se o campo JÁ está com erro, revalida enquanto digita,
+  // assim a mensagem some (ou muda) assim que ele corrige.
   campo.addEventListener("input", function () {
     const campoComErro = campo.parentElement.classList.contains("erro");
     if (campoComErro) {
@@ -220,27 +218,3 @@ campos.forEach(function (campo) {
     }
   });
 });
-
-const contador = document.getElementById("contador-carrinho");
-
-function pegarCarrinho() {
-  const guardado = localStorage.getItem("carrinho");
-
-  if (guardado) {
-    return JSON.parse(guardado);
-  }
-  return [];
-}
-
-function atualizarContador() {
-  const carrinho = pegarCarrinho();
-  let soma = 0;
-
-  for (let i = 0; i < carrinho.length; i++) {
-    soma = soma + carrinho[i].quantidade;
-  }
-
-  contador.innerText = soma;
-}
-
-atualizarContador();
