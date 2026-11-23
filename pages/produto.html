@@ -25,8 +25,23 @@
       <a href="contato.html">Contato</a>
     </nav>
 
+    <nav class="menu-mobile" id="menu-mobile">
+      <img src="../Images/menu-hamburger.svg" alt="Abrir menu" class="menu-toggle" id="menu-toggle"
+           role="button" tabindex="0" aria-expanded="false" aria-controls="menu-links">
+      <div class="menu-links" id="menu-links">
+        <a href="home.html">Home</a>
+        <a href="produto.html">Produtos</a>
+        <a href="sobre-nos.html">Sobre Nós</a>
+        <a href="contato.html">Contato</a>
+        <div class="conta">
+          <a href="login.html">Entrar</a>
+          <a href="cadastro.html">Criar conta</a>
+        </div>
+      </div>
+    </nav>
+
     <div class="icones">
-      <a href="login.html"><img src="../Images/user-icon-hd.png" alt="Minha conta"></a>
+      <a href="login.html" class="user"><img src="../Images/user-icon-hd.png" alt="Minha conta"></a>
       <a href="carrinho.html" class="carrinho">
         <img src="../Images/cart-icon.svg" alt="Carrinho">
         <span id="contador-carrinho">0</span>
@@ -189,6 +204,7 @@
     <p class="copy">© 2026 Diamond Garage. Todos os direitos reservados.</p>
   </footer>
 
+ <script src="../js/pages/menu.js"></script>
   <script src="../js/pages/produto.js"></script>
 
 </body>
