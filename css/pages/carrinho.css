@@ -346,16 +346,29 @@ a {
 }
 
 @media (max-width: 850px) {
-  .conteudo {
-    grid-template-columns: 1fr;
+  .cabecalho {
+    flex-wrap: wrap;
+    padding: 3px 14px 8px;
   }
 
-  .cabecalho {
-    padding: 3px 14px;
+  .logo {
+    height: 60px;
   }
 
   .menu {
-    display: none;
+    order: 3;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .menu a {
+    margin: 0 10px;
+  }
+
+  .conteudo {
+    grid-template-columns: 1fr;
   }
 
   .item {
@@ -383,5 +396,67 @@ a {
     flex-wrap: wrap;
     gap: 20px;
     padding: 0 20px;
+  }
+}
+
+@media (max-width: 500px) {
+  .etapas {
+    gap: 6px;
+    font-size: 12px;
+    padding: 16px 10px 0;
+  }
+
+  .etapas hr {
+    width: 16px;
+  }
+
+  .etapas i {
+    width: 22px;
+    height: 22px;
+    font-size: 12px;
+  }
+
+  .principal {
+    padding: 20px 14px 0;
+  }
+
+  .principal h1 {
+    font-size: 22px;
+    margin-bottom: 16px;
+  }
+
+  .item {
+    grid-template-columns: 64px 1fr;
+    gap: 12px;
+    padding: 10px;
+  }
+
+  .item img {
+    width: 64px;
+    height: 64px;
+  }
+
+  .item h3 {
+    font-size: 14px;
+  }
+
+  .preco-item {
+    font-size: 18px;
+  }
+
+  .resumo {
+    padding: 18px;
+  }
+
+  .linha.total {
+    font-size: 18px;
+  }
+
+  .colunas > div {
+    width: 100%;
+  }
+
+  .rodape {
+    margin-top: 40px;
   }
 }
