@@ -81,6 +81,22 @@ a {
   flex: 1;
 }
 
+.voltar {
+  display: inline-block;
+  background-color: #26211a;
+  color: white;
+  border: 1px solid #3a3328;
+  border-radius: 20px;
+  padding: 8px 18px;
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+.voltar:hover {
+  border-color: #d4af37;
+  color: #d4af37;
+}
+
 .caminho {
   color: #a79d8c;
   font-size: 14px;
